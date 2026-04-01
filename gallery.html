@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVFKRZ1ZK8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JVFKRZ1ZK8');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +77,7 @@
             display: flex; align-items: center; justify-content: center;
             perspective: 1200px;
         }
-         .intro-card-3d {
+        .intro-card-3d {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -88,6 +96,7 @@
             width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px;
             filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
         }
+        .intro-text-3d { text-align: center; margin-top: 8px; }
         .intro-brand-3d {
             font-family: 'Josefin Sans', sans-serif; font-size: 22px; font-weight: 900;
             letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 4px;
@@ -101,10 +110,10 @@
             width: 180px; height: 3px; background: #f3f4f6;
             margin-top: 30px; border-radius: 10px; overflow: hidden; position: relative;
         }
-        .intro-loader-fill { height: 100%; width: 0; background: #b5b5b5; transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
-        #intro-overlay.phase-exit { animation: introExit 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-        @keyframes introExit { to { transform: translateY(-100%); opacity: 0; filter: blur(20px); } }
-        #main-content { opacity: 0; transition: opacity 0.5s ease; }
+        .intro-loader-fill { height: 100%; width: 0; background: linear-gradient(90deg, #b5b5b5, #284b63); box-shadow: 0 0 10px rgba(181,181,181,0.6); transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); }
+        #intro-overlay.phase-exit { animation: introExit 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        @keyframes introExit { to { transform: translateY(-100%); opacity: 0; } }
+        #main-content { opacity: 0; transition: opacity 0.5s ease 0.1s; }
         #main-content.revealed { opacity: 1; }
 
         .glass-3d {
@@ -214,6 +223,13 @@
             display: block;
             transition: transform 0.5s ease;
         }
+    @media(max-width:767px){
+        /* ── NAV: Company name 0.6 scale, tagline same-width aligned ── */
+        #topNav .font-headline.font-black.tracking-tighter { font-size: 13.3px !important; }
+        #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 13.3px !important; }
+        #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 7px; }
+        #topNav img.logo-theme-color { height: 34px !important; margin-top: -3px !important; margin-bottom: -3px !important; }
+    }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface intro-active">
@@ -241,10 +257,10 @@
             <img src="https://i.postimg.cc/RFd6tsd9/sri-asha-forgings-logo-removebg-preview.png"
               alt="Sri Asha Forgings Logo" width="64" height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
             <div class="flex flex-col justify-center w-fit">
-            <div class="text-[20.5px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
+            <div id="brandName" class="text-[20.5px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
               SRI ASHA <span class="text-secondary ml-1.5 sm:ml-2">FORGINGS</span> <span class="text-secondary text-[0.6em] sm:text-[0.45em] md:text-[0.51em] ml-1.5 normal-case font-bold tracking-normal">Pvt Ltd</span>
             </div>
-            <div class="text-[10.0px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
+            <div id="brandTag" class="text-[10.0px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
               Specialist In Aluminium Alloy Forgings
             </div>
             </div>
@@ -600,22 +616,32 @@ function initMobileMenu(){
     'use strict';
     
     (function(){
-        const overlay = document.getElementById('intro-overlay');
-        const barFill = document.getElementById('introBarFill');
-        const mainWrap = document.getElementById('main-content');
-        const introCard = document.getElementById('introCard');
+        var overlay = document.getElementById('intro-overlay');
+        var barFill = document.getElementById('introBarFill');
+        var mainWrap = document.getElementById('main-content');
+        var introCard = document.getElementById('introCard');
 
         if(overlay && barFill && mainWrap && introCard){
-            requestAnimationFrame(() => { 
-                introCard.classList.add('revealed');
-                barFill.style.width = '100%'; 
+            requestAnimationFrame(function(){
+                requestAnimationFrame(function(){
+                    barFill.style.width = '100%';
+                });
             });
-            setTimeout(() => { overlay.classList.add('phase-exit'); }, 800);
-            setTimeout(() => {
+            var cardRevealed = false;
+            function revealCard(){
+                if(cardRevealed) return;
+                cardRevealed = true;
+                introCard.classList.add('revealed');
+            }
+            setTimeout(revealCard, 100);
+            if(document.fonts && document.fonts.ready){ document.fonts.ready.then(revealCard); }
+            setTimeout(function(){ overlay.classList.add('phase-exit'); }, 1800);
+            setTimeout(function(){
                 overlay.style.display = 'none';
+                overlay.style.visibility = 'hidden';
                 document.body.classList.remove('intro-active');
                 mainWrap.classList.add('revealed');
-            }, 1000);
+            }, 2400);
         }
     })();
 initMobileMenu();
@@ -635,6 +661,31 @@ initMobileMenu();
         }
     }
 })();
+
+/* == TAGLINE FIT (mobile only) == */
+function fitTagline() {
+  var bn = document.getElementById('brandName');
+  var bt = document.getElementById('brandTag');
+  if (!bn || !bt) return;
+  if (window.innerWidth > 768) { bt.style.fontSize = ''; return; }
+  var target = bn.offsetWidth;
+  var size = 13;
+  bt.style.fontSize = size + 'px';
+  while (bt.scrollWidth > target && size > 4) {
+    size = Math.round((size - 0.5) * 10) / 10;
+    bt.style.fontSize = size + 'px';
+  }
+  while (bt.scrollWidth < target && size < 13) {
+    var next = Math.round((size + 0.5) * 10) / 10;
+    bt.style.fontSize = next + 'px';
+    if (bt.scrollWidth > target) { bt.style.fontSize = size + 'px'; break; }
+    size = next;
+  }
+}
+var _ftTimer;
+window.addEventListener('resize', function() { clearTimeout(_ftTimer); _ftTimer = setTimeout(fitTagline, 120); });
+if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitTagline); } else { window.addEventListener('load', fitTagline); }
+fitTagline();
 </script>
 </body>
 </html>
