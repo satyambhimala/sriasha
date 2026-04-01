@@ -36,31 +36,8 @@
     <link rel="shortcut icon" href="https://i.postimg.cc/zfB4sy84/sri-asha-forgings-logo-(bg).png">
     <link rel="apple-touch-icon" href="https://i.postimg.cc/zfB4sy84/sri-asha-forgings-logo-(bg).png">
     <meta name="description" content="Explore the visual documentation of Sri Asha Forgings Pvt. Ltd. high-precision aluminum alloy forgings and state-of-the-art manufacturing facility.">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Barlow:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#284b63',
-                        secondary: '#b5b5b5',
-                        surface: '#ffffff',
-                        'on-surface': '#1a2332',
-                        'on-surface-variant': '#475569',
-                        'surface-container': '#f1f5f9',
-                        'surface-container-low': '#f8fafc'
-                    },
-                    fontFamily: {
-                        headline: ['Josefin Sans', 'sans-serif'],
-                        body: ['Barlow', 'sans-serif'],
-                        technical: ['Space Grotesk', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
+<!-- Compiled Tailwind CSS -->
+<link rel="stylesheet" href="style.css">
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -113,6 +90,20 @@
         .intro-loader-fill { height: 100%; width: 0; background: linear-gradient(90deg, #b5b5b5, #284b63); box-shadow: 0 0 10px rgba(181,181,181,0.6); transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); }
         #intro-overlay.phase-exit { animation: introExit 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
         @keyframes introExit { to { transform: translateY(-100%); opacity: 0; } }
+
+        /* Intro Loader Mobile Responsive (Zoom Out) */
+        @media(max-width:767px) {
+            .intro-card-3d { 
+                padding: 28px 32px !important; 
+                transform: rotateX(10deg) rotateY(-10deg) scale(0.85) !important; 
+                border-radius: 16px !important;
+            }
+            .intro-logo-3d { width: 70px !important; height: 70px !important; margin-bottom: 12px !important; }
+            .intro-brand-3d { font-size: 16px !important; }
+            .intro-tag-3d { font-size: 8px !important; }
+            .intro-loader-bar { width: 140px !important; margin-top: 20px !important; }
+        }
+
         #main-content { opacity: 0; transition: opacity 0.5s ease 0.1s; }
         #main-content.revealed { opacity: 1; }
 
@@ -223,13 +214,20 @@
             display: block;
             transition: transform 0.5s ease;
         }
-    @media(max-width:767px){
-        /* ── NAV: Company name 0.6 scale, tagline same-width aligned ── */
-        #topNav .font-headline.font-black.tracking-tighter { font-size: 13.3px !important; }
-        #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 13.3px !important; }
-        #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 7px; }
-        #topNav img.logo-theme-color { height: 34px !important; margin-top: -3px !important; margin-bottom: -3px !important; }
-    }
+        /* ── MOBILE OVERRIDES ── */
+        @media(max-width:767px) {
+            /* ── NAV REFINEMENT (-0.16px adjustment) ── */
+            #topNav { padding-top: 18px !important; padding-bottom: 18px !important; }
+            #topNav .font-headline.font-black.tracking-tighter { font-size: 18.84px !important; }
+            #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 18.84px !important; }
+            #topNav img.logo-theme-color { height: 44px !important; margin-top: -5px !important; margin-bottom: -5px !important; }
+            #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 9.84px; }
+            
+            section { padding-top: 32px !important; padding-bottom: 32px !important; }
+            header h1 { font-size: clamp(32px, 10vw, 48px) !important; margin-bottom: 16px !important; }
+        }
+
+        /* ── REVEAL ANIMATIONS ── */
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface intro-active">
@@ -271,9 +269,6 @@
             <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
             <a href="about.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
             <a href="gallery.html" class="text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-            <a href="Terms.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Terms &amp; Conditions</a>
-            <a href="privacypolicy.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Privacy Policy</a>
-            <a href="Faqs.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">FAQs</a>
             <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger">Get Quote</a>
           </div>
 
@@ -289,9 +284,6 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="gallery.html">Industrial Gallery</a>
-            <a href="Terms.html">Terms &amp; Conditions</a>
-            <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="Faqs.html">FAQs</a>
             <a href="index.html#contact">Get a Quote</a>
           </nav>
         </nav>

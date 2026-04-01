@@ -117,41 +117,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface": "#f8fafc",
-                        "on-surface": "#0f172a",
-                        "primary": "#284b63",
-                        "secondary": "#b5b5b5",
-                        "navy": "#284b63",
-                        "fire": "#b5b5b5",
-                        "industrial-gray": "#334155",
-                        "outline-variant": "#e2e8f0"
-                    },
-                    fontFamily: {
-                        "headline": ["Josefin Sans", "sans-serif"],
-                        "body": ["Barlow", "sans-serif"],
-                        "cond": ["Barlow Condensed", "sans-serif"],
-                        "technical": ["Space Grotesk", "monospace"],
-                        "label": ["Barlow Condensed", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.5rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px" },
-                    boxShadow: {
-                        'industrial': '0 10px 30px -5px rgba(2, 6, 23, 0.1), 0 4px 6px -4px rgba(2, 6, 23, 0.05)',
-                        '3d-subtle': '0 20px 50px -12px rgba(23, 54, 93, 0.25)',
-                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
-                        'milled': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.2), 0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                    }
-                },
-            },
-        }
-    </script>
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="style.css">
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -204,6 +171,20 @@
         .intro-loader-fill { height: 100%; width: 0; background: linear-gradient(90deg, #b5b5b5, #284b63); box-shadow: 0 0 10px rgba(181,181,181,0.6); transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); }
         #intro-overlay.phase-exit { animation: introExit 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
         @keyframes introExit { to { transform: translateY(-100%); opacity: 0; } }
+
+        /* Intro Loader Mobile Responsive (Zoom Out) */
+        @media(max-width:767px) {
+            .intro-card-3d { 
+                padding: 28px 32px !important; 
+                transform: rotateX(10deg) rotateY(-10deg) scale(0.85) !important; 
+                border-radius: 16px !important;
+            }
+            .intro-logo-3d { width: 70px !important; height: 70px !important; margin-bottom: 12px !important; }
+            .intro-brand-3d { font-size: 16px !important; }
+            .intro-tag-3d { font-size: 8px !important; }
+            .intro-loader-bar { width: 140px !important; margin-top: 20px !important; }
+        }
+
         #main-content { opacity: 0; transition: opacity 0.5s ease 0.1s; }
         #main-content.revealed { opacity: 1; }
 
@@ -331,8 +312,6 @@
             .text-xs { font-size: 10px !important; }
 
             /* ── MOBILE SPACING ── */
-            section, main { padding-top: 32px !important; padding-bottom: 32px !important; }
-            header { padding-top: 110px !important; padding-bottom: 40px !important; }
             .max-w-screen-2xl { padding-left: 16px !important; padding-right: 16px !important; }
             .gap-16 { gap: 16px !important; }
             
@@ -343,11 +322,15 @@
             /* 3 dots icon fix */
             #menuToggle .material-symbols-outlined { font-size: 24px !important; }
 
-        /* ── NAV: Company name 0.6 scale, tagline same-width aligned ── */
-        #topNav .font-headline.font-black.tracking-tighter { font-size: 13.3px !important; }
-        #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 13.3px !important; }
-        #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 7px; }
-        #topNav img.logo-theme-color { height: 34px !important; margin-top: -3px !important; margin-bottom: -3px !important; }
+            /* ── NAV REFINEMENT (-0.16px adjustment) ── */
+            #topNav { padding-top: 18px !important; padding-bottom: 18px !important; }
+            #topNav .font-headline.font-black.tracking-tighter { font-size: 18.84px !important; }
+            #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 18.84px !important; }
+            #topNav img.logo-theme-color { height: 44px !important; margin-top: -5px !important; margin-bottom: -5px !important; }
+            #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 9.84px; }
+            
+            section { padding-top: 32px !important; padding-bottom: 40px !important; }
+            header h1 { font-size: clamp(32px, 10vw, 48px) !important; margin-bottom: 16px !important; }
         }
 
         /* Specific content card styling from privacy policy */
@@ -446,9 +429,6 @@
         <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
         <a href="about.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
         <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-        <a href="Terms.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Terms &amp; Conditions</a>
-        <a href="privacypolicy.html" class="text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Privacy Policy</a>
-        <a href="Faqs.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">FAQs</a>
         <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger">Get Quote</a>
       </div>
 
@@ -464,9 +444,6 @@
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="gallery.html">Gallery</a>
-        <a href="Terms.html">Terms &amp; Conditions</a>
-        <a href="privacypolicy.html">Privacy Policy</a>
-        <a href="Faqs.html">FAQs</a>
         <a href="index.html#contact">Get a Quote</a>
       </nav>
     </nav>

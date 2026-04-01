@@ -35,34 +35,8 @@
 <title>About Us | Sri Asha Forgings Pvt. Ltd.</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "primary": "#284b63",
-          "secondary": "#b5b5b5",
-          "surface": "#ffffff",
-          "on-surface": "#2d3e4e",
-          "on-surface-variant": "#546a7b",
-          "surface-container-low": "#f8f9fa",
-          "outline-variant": "#e2e8f0",
-          "primary-container": "#3b5f7a",
-          "on-primary": "#ffffff"
-        },
-        fontFamily: {
-          "headline": ["Josefin Sans", "sans-serif"],
-          "body": ["Barlow", "sans-serif"],
-          "label": ["Barlow Condensed", "sans-serif"]
-        },
-        borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-      },
-    },
-  }
-</script>
+<!-- Compiled Tailwind CSS -->
+<link rel="stylesheet" href="style.css">
 
 <style>
     :root {
@@ -140,6 +114,20 @@
     .intro-loader-fill { height: 100%; width: 0; background: linear-gradient(90deg, #b5b5b5, #284b63); box-shadow: 0 0 10px rgba(181,181,181,0.6); transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1); }
     #intro-overlay.phase-exit { animation: introExit 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
     @keyframes introExit { to { transform: translateY(-100%); opacity: 0; } }
+
+    /* Intro Loader Mobile Responsive (Zoom Out) */
+    @media(max-width:767px) {
+        .intro-card-3d { 
+            padding: 28px 32px !important; 
+            transform: rotateX(10deg) rotateY(-10deg) scale(0.85) !important; 
+            border-radius: 16px !important;
+        }
+        .intro-logo-3d { width: 70px !important; height: 70px !important; margin-bottom: 12px !important; }
+        .intro-brand-3d { font-size: 16px !important; }
+        .intro-tag-3d { font-size: 8px !important; }
+        .intro-loader-bar { width: 140px !important; margin-top: 20px !important; }
+    }
+
     #main-content { opacity: 0; transition: opacity 0.5s ease 0.1s; }
     #main-content.revealed { opacity: 1; }
 
@@ -217,11 +205,12 @@
         footer h4 { font-size: 11px !important; }
         footer p, footer a, footer li { font-size: 12px !important; }
 
-        /* ── NAV: Company name 0.6 scale, tagline same-width aligned ── */
-        #topNav .font-headline.font-black.tracking-tighter { font-size: 13.3px !important; }
-        #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 13.3px !important; }
-        #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 7px; }
-        #topNav img.logo-theme-color { height: 34px !important; margin-top: -3px !important; margin-bottom: -3px !important; }
+        /* ── NAV REFINEMENT (-0.16px adjustment) ── */
+        #topNav { padding-top: 18px !important; padding-bottom: 18px !important; }
+        #topNav .font-headline.font-black.tracking-tighter { font-size: 18.84px !important; }
+        #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 18.84px !important; }
+        #topNav img.logo-theme-color { height: 44px !important; margin-top: -5px !important; margin-bottom: -5px !important; }
+        #brandTag { letter-spacing: normal !important; white-space: nowrap; overflow: hidden; font-size: 9.84px; }
     }
     /* Animations */
     .reveal, .reveal-left, .reveal-right { opacity: 0; transition: all 0.8s cubic-bezier(0.16,1,0.3,1); }
@@ -273,9 +262,6 @@
     <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
     <a href="about.html" class="text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
     <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-    <a href="Terms.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Terms &amp; Conditions</a>
-    <a href="privacypolicy.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Privacy Policy</a>
-    <a href="Faqs.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">FAQs</a>
     <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger">Get Quote</a>
   </div>
 
@@ -291,9 +277,6 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="gallery.html">Gallery</a>
-    <a href="Terms.html">Terms &amp; Conditions</a>
-    <a href="privacypolicy.html">Privacy Policy</a>
-    <a href="Faqs.html">FAQs</a>
     <a href="index.html#contact">Get a Quote</a>
   </nav>
 </nav>
