@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sri Asha Forgings Pvt. Ltd. — About our precision aluminium alloy forging manufacturing excellence since 2004. India's specialists in Aerospace & Defence forgings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+<link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+<link rel="canonical" href="https://www.ashaforging.com/about.html">
+<!-- SEO & Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Us | Sri Asha Forgings Pvt. Ltd.">
+<meta property="og:description" content="Learn about Sri Asha Forgings Pvt. Ltd. — high-precision aluminium alloy forging excellence since 2004. Specialists in Aerospace & Defence.">
+<meta property="og:url" content="https://www.ashaforging.com/about.html">
+<meta property="og:site_name" content="Sri Asha Forgings Pvt. Ltd.">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://i.postimg.cc/RFd6tsd9/sri-asha-forgings-logo-removebg-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Us | Sri Asha Forgings Pvt. Ltd.">
+<meta name="twitter:description" content="Precision aluminium alloy forging excellence since 2004.">
+<meta name="geo.region" content="IN-TG">
+<meta name="geo.placename" content="Hyderabad, Telangana, India">
+<meta name="geo.position" content="17.4239;78.5563">
+<meta name="ICBM" content="17.4239, 78.5563">
+<title>About Us | Sri Asha Forgings Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700;900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#284b63",
+          "secondary": "#b5b5b5",
+          "surface": "#ffffff",
+          "on-surface": "#2d3e4e",
+          "on-surface-variant": "#546a7b",
+          "surface-container-low": "#f8f9fa",
+          "outline-variant": "#e2e8f0",
+          "primary-container": "#3b5f7a",
+          "on-primary": "#ffffff"
+        },
+        fontFamily: {
+          "headline": ["Josefin Sans", "sans-serif"],
+          "body": ["Barlow", "sans-serif"],
+          "label": ["Barlow Condensed", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+      },
+    },
+  }
+</script>
+
+<style>
+    :root {
+        --primary: #284b63;
+        --secondary: #b5b5b5;
+        --surface: #ffffff;
+        --on-surface: #2d3e4e;
+        --on-surface-variant: #546a7b;
+    }
+    body { font-family: 'Barlow', sans-serif; }
+    .font-headline { font-family: 'Josefin Sans', sans-serif; }
+    .font-body { font-family: 'Barlow', sans-serif; }
+    .logo-theme-color { 
+        filter: brightness(0) saturate(100%) invert(31%) sepia(21%) saturate(1074%) hue-rotate(167deg) brightness(97%) contrast(90%); 
+    }
+    .glass-3d {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    }
+    .thermal-gradient-3d {
+        background: linear-gradient(135deg, #284b63 0%, #3b5f7a 100%);
+        box-shadow: 0 4px 14px 0 rgba(0, 32, 67, 0.39), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    }
+    .milled-edge { box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2), 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    .navbar-transition { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    .logo-theme-color { 
+      filter: brightness(0) saturate(100%) invert(31%) sepia(21%) saturate(1074%) hue-rotate(167deg) brightness(97%) contrast(90%); 
+    }
+
+    /* ── 3D INTRO LOADER MODEL ── */
+    body.intro-active { overflow: hidden; }
+    #intro-overlay {
+        position: fixed; inset: 0; z-index: 99999;
+        background: #ffffff;
+        display: flex; align-items: center; justify-content: center;
+        perspective: 1200px;
+    }
+     .intro-card-3d {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 40px 60px;
+        border-radius: 20px;
+        display: flex; flex-direction: column; align-items: center;
+        box-shadow: 0 40px 80px rgba(0, 32, 67, 0.12), inset 0 0 40px rgba(255, 255, 255, 1);
+        opacity: 0;
+        transform: rotateX(15deg) rotateY(-15deg) scale(0.92);
+        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        will-change: transform;
+    }
+    .intro-card-3d.revealed { opacity: 1; transform: rotateX(15deg) rotateY(-15deg) scale(1); }
+    .intro-logo-3d {
+        width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px;
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+    }
+    .intro-brand-3d {
+        font-family: 'Josefin Sans', sans-serif; font-size: 22px; font-weight: 900;
+        letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 4px;
+        color: #284b63;
+    }
+    .intro-tag-3d {
+        font-family: 'Barlow', sans-serif; font-size: 10px; font-weight: 600;
+        letter-spacing: 0.18em; text-transform: uppercase; color: #b5b5b5;
+    }
+    .intro-loader-bar {
+        width: 180px; height: 3px; background: #f3f4f6;
+        margin-top: 30px; border-radius: 10px; overflow: hidden; position: relative;
+    }
+    .intro-loader-fill { height: 100%; width: 0; background: #b5b5b5; transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
+    #intro-overlay.phase-exit { animation: introExit 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+    @keyframes introExit { to { transform: translateY(-100%); opacity: 0; filter: blur(20px); } }
+    #main-content { opacity: 0; transition: opacity 0.5s ease; }
+    #main-content.revealed { opacity: 1; }
+
+    /* ── FLOATING BUTTONS ── */
+    #wa-btn {
+        position: fixed; bottom: 24px; right: 28px; z-index: 8999;
+        width: 48px; height: 48px; background: #fff; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; color: #25D366;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), box-shadow 0.22s;
+        text-decoration: none;
+    }
+    #wa-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+    #wa-btn svg { width: 22px; height: 22px; }
+    .wa-tooltip {
+        position: absolute; right: 68px; top: 50%; transform: translateY(-50%);
+        background: #1a2332; color: #fff; font-family: 'Barlow', sans-serif;
+        font-size: 12px; font-weight: 500; white-space: nowrap;
+        padding: 6px 12px; border-radius: 4px; pointer-events: none;
+        opacity: 0; transition: opacity 0.2s; letter-spacing: 0.04em;
+    }
+    #wa-btn:hover .wa-tooltip { opacity: 1; }
+    
+    #call-btn {
+        position: fixed; bottom: 84px; right: 28px; z-index: 8999;
+        width: 48px; height: 48px; background: #284b63; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; color: #fff;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), box-shadow 0.22s;
+        text-decoration: none;
+    }
+    #call-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+    #call-btn:hover .wa-tooltip { opacity: 1; }
+    #call-btn .material-symbols-outlined { font-size: 22px; }
+
+    @supports(padding:env(safe-area-inset-bottom)) {
+        #wa-btn { bottom: calc(24px + env(safe-area-inset-bottom)); right: calc(24px + env(safe-area-inset-right)); }
+    }
+    
+    /* ── MOBILE ── */
+    .mobile-menu { 
+        display: none; flex-direction: column; width: 100%; order: 10; 
+        border-top: 1px solid rgba(40,75,99,0.1); margin-top: 12px; padding-top: 8px; 
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+        font-family: 'Josefin Sans', sans-serif; font-size: 14px; font-weight: 600; color: #284b63;
+        padding: 14px 4px; border-bottom: 1px solid rgba(40,75,99,0.05);
+        letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s, padding-left 0.2s;
+    }
+    .mobile-menu a:hover { color: #b5b5b5; padding-left: 8px; }
+
+    @media(max-width:767px){
+        .mobile-hide { display: none !important; }
+        
+        /* ── GLOBAL MOBILE TYPOGRAPHY ── */
+        body { font-size: 14px; }
+        section h2 { font-size: clamp(20px, 6vw, 26px) !important; margin-bottom: 14px !important; }
+        section h3 { font-size: clamp(18px, 5vw, 22px) !important; }
+        section h4 { font-size: clamp(14px, 4vw, 17px) !important; }
+        section p, section li { font-size: clamp(12px, 3.2vw, 14px) !important; line-height: 1.6 !important; }
+        .text-xs { font-size: 10px !important; }
+
+        /* ── MOBILE SPACING ── */
+        section { padding-top: 32px !important; padding-bottom: 32px !important; }
+        .container { padding-left: 16px !important; padding-right: 16px !important; }
+        .gap-12, .gap-16, .gap-20 { gap: 16px !important; }
+        
+        /* ── HERO ── */
+        header h1 { font-size: clamp(32px, 10vw, 48px) !important; margin-bottom: 16px !important; }
+        header p { font-size: 14px !important; }
+        header { padding-top: 96px !important; padding-bottom: 40px !important; }
+
+        /* ── FOOTER ── */
+        footer h4 { font-size: 11px !important; }
+        footer p, footer a, footer li { font-size: 12px !important; }
+    }
+    /* Animations */
+    .reveal, .reveal-left, .reveal-right { opacity: 0; transition: all 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal { transform: translateY(30px); }
+    .reveal-left { transform: translateX(-30px); }
+    .reveal-right { transform: translateX(30px); }
+    .reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+    #progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--secondary); z-index: 10000; transition: width 0.1s; }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface intro-active">
+    <!-- ═══ 3D INTRO LOADER MODEL ═══ -->
+    <div id="intro-overlay" role="status" aria-label="Loading Sri Asha Forgings">
+      <div class="intro-card-3d" id="introCard">
+        <img class="intro-logo-3d logo-theme-color"
+          src="https://i.postimg.cc/RFd6tsd9/sri-asha-forgings-logo-removebg-preview.png"
+          width="100" height="100"
+          alt="Sri Asha Forgings Logo">
+        <div class="intro-text-3d">
+          <div class="intro-brand-3d">SRI ASHA <span class="text-[#b5b5b5]">FORGINGS</span> <span class="text-[#b5b5b5] text-[0.6em] normal-case">Pvt Ltd</span></div>
+          <div class="intro-tag-3d">Specialist In Aluminium Alloy Forgings</div>
+        </div>
+        <div class="intro-loader-bar">
+          <div class="intro-loader-fill" id="introBarFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-content">
+<div id="progress"></div>
+
+<!-- ═══ NAVBAR (Global Site-wide Navigation) ═══ -->
+<nav id="topNav" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex flex-wrap justify-between items-center milled-edge navbar-transition">
+  <div class="flex items-center gap-1.5 md:gap-2">
+    <img src="https://i.postimg.cc/RFd6tsd9/sri-asha-forgings-logo-removebg-preview.png"
+      alt="Sri Asha Forgings Logo" width="64" height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
+    <div class="flex flex-col justify-center w-fit">
+      <div class="text-[20.5px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
+        SRI ASHA <span class="text-secondary ml-1.5 sm:ml-2">FORGINGS</span> <span class="text-secondary text-[0.6em] sm:text-[0.45em] md:text-[0.51em] ml-1.5 normal-case font-bold tracking-normal">Pvt Ltd</span>
+      </div>
+      <div class="text-[10.0px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
+        Specialist In Aluminium Alloy Forgings
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop Nav Links -->
+  <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+    <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
+    <a href="about.html" class="text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
+    <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
+    <a href="Terms.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Terms &amp; Conditions</a>
+    <a href="privacypolicy.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Privacy Policy</a>
+    <a href="Faqs.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">FAQs</a>
+    <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger">Get Quote</a>
+  </div>
+
+  <!-- Mobile toggle (3 Dots) -->
+  <button class="md:hidden thermal-gradient-3d text-white w-4 h-8 rounded-[3px] shadow-md flex flex-col items-center justify-center gap-1" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="w-1 h-1 bg-white rounded-full"></div>
+    <div class="w-1 h-1 bg-white rounded-full"></div>
+    <div class="w-1 h-1 bg-white rounded-full"></div>
+  </button>
+
+  <!-- Mobile Menu (Hidden on desktop) -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="Terms.html">Terms &amp; Conditions</a>
+    <a href="privacypolicy.html">Privacy Policy</a>
+    <a href="Faqs.html">FAQs</a>
+    <a href="index.html#contact">Get a Quote</a>
+  </nav>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="pt-32 pb-16 bg-surface mt-12 md:mt-20">
+    <section class="max-w-screen-2xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 reveal-left">
+                <div class="inline-flex items-center gap-3 bg-surface-container-low border border-outline-variant/30 rounded-full px-5 py-2 mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                    </span>
+                    <span class="text-[10px] font-body font-bold uppercase tracking-[0.3em] text-on-surface-variant">Established 2004 &middot; Hyderabad, India</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-headline font-bold text-primary tracking-tighter leading-[0.9] mb-8 uppercase italic">
+                    OUR <br/><span class="text-primary not-italic">LEGACY</span>
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
+                    With two decades of technical expertise, Sri Asha Forgings is a premier manufacturer of mission-critical aluminium alloy components for global sectors.
+                </p>
+                <a href="index.html#contact" class="thermal-gradient-3d text-white px-8 py-3.5 rounded-[8px] font-headline font-bold uppercase tracking-widest text-xs shadow-lg inline-block">Get in Touch</a>
+            </div>
+            <div class="lg:col-span-5 relative hidden md:block reveal-right">
+                <div class="aspect-[4/3] overflow-hidden rounded-xl border border-outline-variant/20 shadow-lg group">
+                    <img alt="Our Facility"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                         src="https://i.postimg.cc/8CG8Szgf/image.png" style="opacity: 0.9;" />
+                    <div class="absolute inset-0 bg-primary/10 transition-colors group-hover:bg-primary/0"></div>
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-surface p-6 shadow-2xl rounded-lg border-l-4 border-secondary glass-3d">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+                        <p class="font-headline text-3xl font-bold text-primary">ISO</p>
+                    </div>
+                    <p class="text-xs font-body uppercase tracking-widest font-bold text-on-surface-variant">Certified Quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+<!-- ═══ CONTENT SECTIONS ═══ -->
+<section id="story" class="py-16 md:py-24 bg-surface-container-low">
+    <div class="container mx-auto px-4 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="reveal-left">
+                <span class="text-secondary font-headline font-bold uppercase tracking-widest text-sm mb-4 block">Our Story</span>
+                <h2 class="text-3xl md:text-5xl font-headline font-black text-primary mb-8 tracking-tighter uppercase leading-tight">FOUNDED ON<br>PRECISION</h2>
+                <p class="text-on-surface-variant text-lg leading-relaxed font-light mb-6">Under the visionary leadership of Managing Director <strong>Mr. M. Ravi Kumar</strong>, Sri Asha Forgings Pvt. Ltd. was established to push the boundaries of metallurgical engineering. Starting with a commitment to excellence, we have grown into a leading name in specialised aluminium alloy forgings.</p>
+                <p class="text-on-surface-variant text-lg leading-relaxed font-light">Our journey is defined by continuous technical innovation, from mastering complex aerospace geometries to pioneering 2195 Aluminium Lithium alloy forging in India. We operate with a philosophy that precision is not just a requirement, but our legacy.</p>
+            </div>
+            <div class="reveal-right">
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
+                    <div class="p-6 bg-white border-l-4 border-secondary shadow-sm hover:translate-y-[-4px] transition-transform">
+                        <div class="text-3xl font-headline font-black text-primary mb-1">2004</div>
+                        <div class="text-xs text-secondary font-bold uppercase tracking-wider">Foundation Year</div>
+                    </div>
+                    <div class="p-6 bg-white border-l-4 border-secondary shadow-sm hover:translate-y-[-4px] transition-transform">
+                        <div class="text-3xl font-headline font-black text-primary mb-1">20+</div>
+                        <div class="text-xs text-secondary font-bold uppercase tracking-wider">Years Excellence</div>
+                    </div>
+                    <div class="p-6 bg-white border-l-4 border-secondary shadow-sm hover:translate-y-[-4px] transition-transform">
+                        <div class="text-3xl font-headline font-black text-primary mb-1">500+</div>
+                        <div class="text-xs text-secondary font-bold uppercase tracking-wider">Project Types</div>
+                    </div>
+                    <div class="p-6 bg-white border-l-4 border-secondary shadow-sm hover:translate-y-[-4px] transition-transform">
+                        <div class="text-3xl font-headline font-black text-primary mb-1">ISO</div>
+                        <div class="text-xs text-secondary font-bold uppercase tracking-wider">9001:2015 Cert</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CAPABILITIES ═══ -->
+<section id="capabilities" class="py-16 md:py-24 bg-surface text-on-surface">
+    <div class="container mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="text-secondary font-headline font-bold uppercase tracking-widest text-sm mb-4 block">Technical Prowess</span>
+            <h2 class="text-3xl md:text-5xl font-headline font-black text-primary mb-6 tracking-tighter uppercase">MANUFACTURING<br>EXCELLENCE</h2>
+            <p class="text-on-surface-variant text-lg font-light leading-relaxed">Our facility is equipped with state-of-the-art 15T arch-type forging hammers and precision temperature-controlled furnaces, capable of handling the most demanding industrial requirements.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant/30 reveal">
+                <div class="mb-6">
+                    <span class="material-symbols-outlined text-secondary text-4xl">precision_manufacturing</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-primary mb-4 uppercase">FORGED COMPONENTS</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed font-light">Specializing in high-precision cylinder sleeves, discs, hubs, and flanges. Our expertise extends to hand-forged components, rings, rods, blanks, and complex long tube forgings for specialized applications.</p>
+            </div>
+            
+            <div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant/30 reveal">
+                <div class="mb-6">
+                    <span class="material-symbols-outlined text-secondary text-4xl">layers</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-primary mb-4 uppercase">MATERIAL EXPERTISE</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed font-light">While we are leaders in Aluminium Alloys, our metallurgical capabilities encompass Copper, Bronze, and a wide variety of Steel alloys—including high-performance Stainless and Carbon steels.</p>
+            </div>
+            
+            <div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant/30 reveal">
+                <div class="mb-6">
+                    <span class="material-symbols-outlined text-secondary text-4xl">verified</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-primary mb-4 uppercase">QUALITY ASSURED</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed font-light">As an ISO 9001 certified facility, every component undergoes rigorous testing. Our oil-fired and electrical heating furnaces feature advanced temperature recorders to ensure consistent material properties across every batch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ MISSION & VISION ═══ -->
+<section id="vision" class="py-16 md:py-24 bg-surface-container-low">
+    <div class="container mx-auto px-4 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="p-10 bg-white shadow-xl rounded-2xl reveal-left">
+                <h3 class="text-2xl font-headline font-black text-primary mb-6 uppercase tracking-tight italic">Our Mission</h3>
+                <p class="text-on-surface-variant text-lg font-light leading-relaxed">To deliver world-class aluminium and special alloy forgings through relentless technical advancement and metallurgical precision, supporting the strategic growth of aerospace, defense, and power sectors globally.</p>
+            </div>
+            <div class="p-10 bg-white shadow-xl rounded-2xl reveal-right border-b-4 border-secondary">
+                <h3 class="text-2xl font-headline font-black text-primary mb-6 uppercase tracking-tight italic">Our Vision</h3>
+                <p class="text-on-surface-variant text-lg font-light leading-relaxed">To become the global benchmark for complex alloy forging engineering, recognized for our ability to pioneer solutions for the most challenging mission-critical environments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer from index.html (Standardized) -->
+<footer class="bg-[#284b63] text-white dark-section">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-12 gap-y-8 px-4 md:px-8 py-8 md:py-20 w-full max-w-[1440px] mx-auto text-left">
+    <div class="space-y-4 col-span-2 md:col-span-1 border-b border-white/10 md:border-none pb-6 md:pb-0">
+      <img src="https://i.postimg.cc/RFd6tsd9/sri-asha-forgings-logo-removebg-preview.png" height="38" alt="Sri Asha Forgings Pvt. Ltd." class="h-9 md:h-11 brightness-0 invert" decoding="async">
+      <div class="text-[14px] md:text-lg font-headline font-bold text-white uppercase tracking-widest leading-tight">SRI ASHA FORGINGS</div>
+      <p class="text-slate-300 font-light text-[10.5px] md:text-sm leading-tight md:leading-relaxed font-body">
+        Precision aluminium alloy forgings and machined components for critical industrial applications. Serving aerospace, defence, and heavy engineering since 2004.</p>
+    </div>
+    <div class="col-span-1 md:col-span-1 pr-2">
+      <h4 class="font-headline font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] mb-4 md:mb-8 text-[#b5b5b5]">Pages</h4>
+      <ul class="space-y-2 md:space-y-4 font-body font-light text-slate-300 text-[10.5px] md:text-sm">
+        <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+        <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+        <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
+        <li><a class="hover:text-white transition-colors" href="metallurgy.html">Metallurgical Reports</a></li>
+        <li><a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a></li>
+        <li><a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="col-span-1 md:col-span-1">
+      <h4 class="font-headline font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] mb-4 md:mb-8 text-[#b5b5b5]">Contact</h4>
+      <p class="font-label text-[8px] tracking-widest uppercase text-slate-400 mb-1">Email</p>
+      <ul class="space-y-1 mb-4 font-body font-light text-slate-300 text-[9.5px] md:text-sm">
+        <li><a class="hover:text-white transition-colors block" href="mailto:mail.ashaforging@gmail.com">mail.ashaforging@gmail.com</a></li>
+        <li><a class="hover:text-white transition-colors block" href="mailto:forgings@rediffmail.com">forgings@rediffmail.com</a></li>
+        <li><a class="hover:text-white transition-colors block" href="mailto:info@ashaforging.com">info@ashaforging.com</a></li>
+      </ul>
+      <p class="font-label text-[8px] tracking-widest uppercase text-slate-400 mb-1">Phone</p>
+      <ul class="space-y-1 font-body font-light text-slate-300 text-[10.5px] md:text-sm">
+        <li><a class="hover:text-white transition-colors block" href="tel:+919849608954">+91 98496 08954</a></li>
+        <li><a class="hover:text-white transition-colors block" href="tel:+919394611101">+91 93946 11101</a></li>
+      </ul>
+    </div>
+    <div class="col-span-2 md:col-span-1 border-t border-white/10 md:border-none pt-6 md:pt-0">
+      <h4 class="font-headline font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] mb-4 md:mb-8 text-[#b5b5b5]">Address</h4>
+      <p class="text-slate-300 font-body font-light text-[10.5px] md:text-sm leading-relaxed">Plot No 161A, Phase-II, Cherlapalli, Hyderabad, Telangana 500051, India</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 md:py-8 px-4 md:px-8">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 text-sm font-body">
+      <span>&copy; 2026 Sri Asha Forgings Pvt. Ltd. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a>
+        <a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a>
+      </div>
+    </div>
+    <div class="text-center mt-8 pt-8 border-t border-white/5">
+      <a href="https://wa.me/919888435999" 
+         title="Satyam Bhimala - Entrepreneur & Web Developer"
+         class="text-slate-500 hover:text-white transition-colors text-[11px] font-body uppercase tracking-[0.2em]">
+         Web Designed By Satyam Bhimala
+      </a>
+      
+      <!-- Hidden Designer Profile for SEO -->
+      <div style="display:none;" aria-hidden="true">
+        Satyam Bhimala is an entrepreneur, website developer, and emerging finance-focused business builder, known for creating digital platforms and working on luxury-brand positioning and stock market learning.
+        Profile: Founder of Cantford (Luxury Shopping & Affiliate Platform). 
+        Expertise: Website Development, Luxury Brand Building, Dropshipping, Affiliate Business, Stock Market Learning (Price Action), Business Strategy, Digital Marketing.
+        Projects: Cantford (Luxury shopping platform, affiliate + dropshipping, automated using Google Apps Script).
+        Goal: Build a powerful portfolio combining Luxury Brand, Finance, Technology, Digital Assets, and Stock Market.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Call Button -->
+<a id="call-btn"
+   href="tel:9697884411"
+   aria-label="Call Sri Asha Forgings Sales Team">
+  <span class="material-symbols-outlined">call</span>
+  <span class="wa-tooltip">Call Now</span>
+</a>
+
+<!-- WhatsApp Floating Button -->
+<a id="wa-btn"
+   href="https://wa.me/919697884411?text=We%20are%20interested%20to%20deal%20with%20you"
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Contact Sri Asha Forgings via WhatsApp Chat">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+</a>
+</div>
+
+<script>
+    (function(){
+        const overlay = document.getElementById('intro-overlay');
+        const barFill = document.getElementById('introBarFill');
+        const mainWrap = document.getElementById('main-content');
+        const introCard = document.getElementById('introCard');
+
+        if(overlay && barFill && mainWrap && introCard){
+            requestAnimationFrame(() => { 
+                introCard.classList.add('revealed');
+                barFill.style.width = '100%'; 
+            });
+            setTimeout(() => { overlay.classList.add('phase-exit'); }, 800);
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                document.body.classList.remove('intro-active');
+                mainWrap.classList.add('revealed');
+            }, 1000);
+        }
+
+        /* Mobile Menu */
+        var btn = document.getElementById('menuToggle'), menu = document.getElementById('mobileMenu');
+        if(btn && menu) {
+            btn.addEventListener('click', function(){ menu.classList.toggle('open'); });
+            menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.classList.remove('open'); }); });
+        }
+        /* Reveal */
+        var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+        },{threshold:0.1});
+        document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){ io.observe(el); });
+    })();
+</script>
+</body>
+</html>
