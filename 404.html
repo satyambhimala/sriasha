@@ -97,6 +97,12 @@
   
   #main-content { opacity: 0; transition: opacity 0.5s ease; }
   #main-content.revealed { opacity: 1; }
+    @media(max-width:767px) {
+      /* ── BRAND HEADER MOBILE REFINEMENT ── */
+      #brandName { font-size: 17.3px !important; }
+      #brandName span:last-child { font-size: 0.6em !important; }
+      #brandTag { font-size: 10.6px !important; letter-spacing: normal !important; text-align: left !important; }
+    }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body intro-active overflow-hidden">
@@ -109,7 +115,7 @@
       width="100" height="100"
       alt="Sri Asha Forgings Logo">
     <div class="intro-text-3d">
-      <div class="intro-brand-3d font-headline">SRI ASHA <span class="text-[#b5b5b5]">FORGINGS</span> <span class="text-[#b5b5b5] text-[0.6em] normal-case">Pvt Ltd</span></div>
+      <div class="intro-brand-3d">SRI ASHA <span class="text-[#b5b5b5]">FORGINGS</span> <span class="text-[#b5b5b5] text-[0.6em] normal-case">Pvt Ltd</span></div>
       <div class="intro-tag-3d">Specialist In Aluminium Alloy Forgings</div>
     </div>
     <div class="intro-loader-bar">
@@ -199,5 +205,16 @@
         }
     })();
 </script>
+
+  <!-- Offline Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 </html>

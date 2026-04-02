@@ -29,3 +29,5 @@
 # 5. 404 fallback — serve custom 404 page
 # Note: 404 fallback is handled automatically by Cloudflare Pages
 # For Workers, add a not_found_handling in wrangler config instead
+
+/*  /404.html  404

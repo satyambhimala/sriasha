@@ -170,15 +170,16 @@
   #main-content { opacity: 0; transition: opacity 0.5s ease 0.1s; }
   #main-content.revealed { opacity: 1; }
   @media (max-width: 767px) {
-    /* ── NAV REFINEMENT (-0.2px adjustment) ── */
-    #topNav { padding-top: 12px !important; padding-bottom: 12px !important; }
-    #topNav .font-headline.font-black.tracking-tighter { font-size: 18.64px !important; }
-    #topNav .font-headline.font-black.tracking-tighter .text-secondary { font-size: 18.64px !important; }
-    #topNav img.logo-theme-color { height: 52px !important; margin-top: -5px !important; margin-bottom: -5px !important; }
-    #brandTag { font-size: 9.64px !important; letter-spacing: normal !important; white-space: nowrap; overflow: hidden; }
+
 
     section h2 { font-size: 24px !important; }
   }
+    @media(max-width:767px) {
+      /* ── BRAND HEADER MOBILE REFINEMENT ── */
+      #brandName { font-size: 17.3px !important; }
+      #brandName span:last-child { font-size: 0.6em !important; }
+      #brandTag { font-size: 10.6px !important; letter-spacing: normal !important; text-align: left !important; }
+    }
 </style>
 </head>
 <body class="bg-[#f8fafc] text-primary font-body overflow-x-hidden intro-active" oncontextmenu="return false;">
@@ -208,10 +209,10 @@
     <img src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp"
       alt="Sri Asha Forgings Logo" width="64" height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
     <div class="flex flex-col justify-center w-fit">
-      <div id="brandName" class="text-[20.5px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
+      <div id="brandName" class="text-[25.1px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
         SRI ASHA <span class="text-secondary ml-1.5 sm:ml-2">FORGINGS</span> <span class="text-secondary text-[0.6em] sm:text-[0.45em] md:text-[0.51em] ml-1.5 normal-case font-bold tracking-normal">Pvt Ltd</span>
       </div>
-      <div id="brandTag" class="text-[10.0px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
+      <div id="brandTag" class="text-[9px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
         Specialist In Aluminium Alloy Forgings
       </div>
     </div>
@@ -222,7 +223,7 @@
     <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
     <a href="about.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
     <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-    <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger">Get Quote</a>
+    <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger" title="Request a Quote">Request a Quote</a>
   </div>
 
   <button class="md:hidden thermal-gradient-3d text-white w-4 h-8 rounded-[3px] shadow-md flex flex-col items-center justify-center gap-1" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -236,7 +237,7 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="gallery.html">Gallery</a>
-    <a href="index.html#contact">Get a Quote</a>
+    <a href="index.html#contact" title="Request a Quote">Request a Quote</a>
   </nav>
 </nav>
 
@@ -840,32 +841,20 @@ function initMobileMenu(){
   });
   document.addEventListener('contextmenu', function(event){ event.preventDefault(); });
 
-/* == TAGLINE FIT (mobile only) == */
-function fitTagline() {
-  var bn = document.getElementById('brandName');
-  var bt = document.getElementById('brandTag');
-  if (!bn || !bt) return;
-  if (window.innerWidth > 768) { bt.style.fontSize = ''; return; }
-  var target = bn.offsetWidth;
-  var size = 13;
-  bt.style.fontSize = size + 'px';
-  while (bt.scrollWidth > target && size > 4) {
-    size = Math.round((size - 0.5) * 10) / 10;
-    bt.style.fontSize = size + 'px';
-  }
-  while (bt.scrollWidth < target && size < 13) {
-    var next = Math.round((size + 0.5) * 10) / 10;
-    bt.style.fontSize = next + 'px';
-    if (bt.scrollWidth > target) { bt.style.fontSize = size + 'px'; break; }
-    size = next;
-  }
-}
-var _ftTimer;
-window.addEventListener('resize', function() { clearTimeout(_ftTimer); _ftTimer = setTimeout(fitTagline, 120); });
-if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitTagline); } else { window.addEventListener('load', fitTagline); }
-fitTagline();
+
 </script>
 
 </div>
+
+  <!-- Offline Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
