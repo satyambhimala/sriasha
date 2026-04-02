@@ -19,12 +19,26 @@
 
 # 4. Normalize page URLs (handle missing .html extension)
 
-/faqs               /Faqs.html      301
-/faq                /Faqs.html      301
+/about              /about.html          301
+/about-us           /about.html          301
+
+/gallery            /gallery.html        301
+/images             /gallery.html        301
+
+/metallurgy         /metallurgy.html     301
+/reports            /metallurgy.html     301
+
+/faqs               /Faqs.html           301
+/faq                /Faqs.html           301
+
 /privacy            /privacypolicy.html  301
 /privacy-policy     /privacypolicy.html  301
-/terms              /Terms.html     301
-/terms-of-service   /Terms.html     301
+
+/terms              /Terms.html          301
+/terms-of-service   /Terms.html          301
+
+/contact            /                    301
+/contact-us         /                    301
 
 # 5. 404 fallback — serve custom 404 page
 # Note: 404 fallback is handled automatically by Cloudflare Pages
