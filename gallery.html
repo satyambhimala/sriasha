@@ -514,7 +514,7 @@
 
       <!-- Mobile toggle (3 Dots) -->
       <button
-        class="md:hidden thermal-gradient-3d text-white w-4 h-8 rounded-[3px] shadow-md flex flex-col items-center justify-center gap-1"
+        class="md:hidden shrink-0 thermal-gradient-3d text-white w-4 h-8 rounded-[3px] shadow-md flex flex-col items-center justify-center gap-1"
         id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <div class="w-1 h-1 bg-white rounded-full"></div>
         <div class="w-1 h-1 bg-white rounded-full"></div>
@@ -1189,6 +1189,54 @@
       });
     }
   </script>
+
+    <!-- Page Transition Interceptor -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('a').forEach(link => {
+          if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('href').startsWith('tel:') && !link.getAttribute('href').startsWith('mailto:')) {
+            // Only trigger if going to a different page route
+            if (link.pathname !== window.location.pathname) {
+              link.addEventListener('click', function(e) {
+                // Allow new tab clicks to work normally
+                if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
+                
+                e.preventDefault();
+                const href = this.href;
+                const overlay = document.getElementById('intro-overlay');
+                
+                if (overlay) {
+                  // Re-enable and show the 3D loader
+                  overlay.classList.remove('phase-exit');
+                  overlay.style.display = 'flex';
+                  overlay.style.visibility = 'visible';
+                  overlay.style.opacity = '1';
+                  
+                  // Restart the loader animation bar
+                  const barFill = document.getElementById('introBarFill');
+                  if (barFill) {
+                    barFill.style.transition = 'none';
+                    barFill.style.width = '0%';
+                    setTimeout(() => {
+                      barFill.style.transition = 'width 1s cubic-bezier(0.65, 0, 0.35, 1)';
+                      barFill.style.width = '60%';
+                    }, 10);
+                  }
+                  
+                  // Navigate in background while loader processes
+                  setTimeout(() => {
+                    window.location.href = href;
+                  }, 150);
+                } else {
+                  window.location.href = href;
+                }
+              });
+            }
+          }
+        });
+      });
+    </script>
+
 </body>
 
 </html>
