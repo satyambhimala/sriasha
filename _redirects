@@ -1,23 +1,30 @@
-# Sri Asha Forgings - Cloudflare Pages Optimized Redirects
+# Sri Asha Forgings — Cloudflare Pages Redirects
 
-# 1. Clean Roots (Optional, Cloudflare handles /index.html automatically)
-/home /index.html 301
+# 1. Clean Root
+/home               /               301
+/home.html          /               301
+/index-new          /               301
+/index-new.html     /               301
 
-# 2. Legacy / Clean URL Support
-# These are rewrites (200), which serve the file without changing the URL.
-/about /about.html 200
-/gallery /gallery.html 200
-/metallurgy /metallurgy.html 200
-/faqs /Faqs.html 200
-/privacy /privacypolicy.html 200
-/terms /Terms.html 200
+# 2. Main Pages
+/about              /about.html     301
+/about-us           /about.html     301
 
-# 3. Canonical Redirects (301)
-/about-us /about 301
-/faq /faqs 301
-/metallurgy-reports /metallurgy 301
+/gallery            /gallery.html   301
+/images             /gallery.html   301
 
-# 4. Global 404 Fallback
-# This serves the 404.html file for any path that doesn't exist.
-/* /404.html 404
+/metallurgy         /metallurgy.html  301
+/reports            /metallurgy.html  301
 
+# 3. Utility Pages
+/faqs               /Faqs.html      301
+/faq                /Faqs.html      301
+
+/privacy            /privacypolicy.html  301
+/privacy-policy     /privacypolicy.html  301
+
+/terms              /Terms.html     301
+/terms-of-service   /Terms.html     301
+
+/contact            /#contact       301
+/contact-us         /#contact       301
