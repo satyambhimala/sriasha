@@ -1,23 +1,21 @@
-# Sri Asha Forgings - Cloudflare Pages Absolute Redirects
-# Format: [source] [destination] [status]
+# Sri Asha Forgings - Cloudflare Pages Redirects
 
-# 1. Clean Roots
-/index.html / 301
+# 1. Clean Root
 /home / 301
 
-# 2. Main Navigation Clean Mappings
+# 2. Main Navigation
 /about /about.html 200
 /gallery /gallery.html 200
 /metallurgy /metallurgy.html 200
 /metallurgy-reports /metallurgy.html 301
 
-# 3. Footer & Utility Clean Mappings
+# 3. Footer & Utility
 /faqs /Faqs.html 200
 /faq /Faqs.html 301
 /privacy /privacypolicy.html 200
 /terms /Terms.html 200
 
-# 4. Canonical / Common Typos
+# 4. Common Typos
 /about-us /about.html 301
 /contact /#contact 301
 
