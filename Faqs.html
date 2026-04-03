@@ -361,10 +361,12 @@
 
     <div id="main-content">
     <!-- ═══ NAVBAR (Global Site-wide Navigation) ═══ -->
-    <nav id="topNav" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex flex-wrap justify-between items-center navbar-transition">
+    <nav id="topNav"
+      class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex md:flex-nowrap flex-wrap justify-between items-center milled-edge navbar-transition">
       <div class="flex items-center gap-1.5 md:gap-2">
         <img src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp"
-          alt="Sri Asha Forgings Logo" width="64" height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
+          alt="Sri Asha Forgings Logo" width="64" height="64"
+          class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
         <div class="flex flex-col justify-center w-fit">
           <div id="brandName" class="text-[25.1px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
         SRI ASHA <span class="text-secondary ml-1.5 sm:ml-2">FORGINGS</span> <span class="text-secondary text-[0.6em] sm:text-[0.45em] md:text-[0.51em] ml-1.5 normal-case font-bold tracking-normal">Pvt Ltd</span>
@@ -698,28 +700,7 @@
             }
         })();
 
-        function fitTagline() {
-          var bn = document.getElementById('brandName');
-          var bt = document.getElementById('brandTag');
-          if (!bn || !bt) return;
-          if (window.innerWidth > 768) { bt.style.fontSize = ''; return; }
-          var target = bn.offsetWidth;
-          var size = 13;
-          bt.style.fontSize = size + 'px';
-          while (bt.scrollWidth > target && size > 4) {
-            size = Math.round((size - 0.5) * 10) / 10;
-            bt.style.fontSize = size + 'px';
-          }
-          while (bt.scrollWidth < target && size < 13) {
-            var next = Math.round((size + 0.5) * 10) / 10;
-            bt.style.fontSize = next + 'px';
-            if (bt.scrollWidth > target) { bt.style.fontSize = size + 'px'; break; }
-            size = next;
-          }
-        }
-        window.addEventListener('resize', fitTagline);
-        window.addEventListener('load', fitTagline);
-        if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fitTagline); }
+
     </script>
 
   <!-- Offline Service Worker -->
