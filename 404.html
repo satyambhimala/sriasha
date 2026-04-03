@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+<link rel="dns-prefetch" href="//i.postimg.cc">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found | Sri Asha Forgings Pvt. Ltd.</title>
+<link rel="icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
+<link rel="shortcut icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
+<link rel="apple-touch-icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
+<meta name="author" content="Sai Rohit Chowdary, Sri Asha Forgings Pvt. Ltd.">
+<meta name="designer" content="Satyam Bhimala — Web Designer for Sri Asha Forgings Pvt. Ltd.">
+<meta name="director" content="Sai Rohit Chowdary — Director, Sri Asha Forgings Pvt. Ltd.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://i.postimg.cc https://lh3.googleusercontent.com https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://i.postimg.cc https://script.google.com https://script.googleusercontent.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; frame-src https://www.google.com https://maps.google.com https://script.google.com https://script.googleusercontent.com; object-src 'none';">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.ashaforging.com/404">
+
+
+<!-- Fonts -->
+
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;900&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<!-- Tailwind for utility support -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#284b63',
+          secondary: '#b5b5b5',
+          accent: '#17365d',
+          surface: '#f8fafc',
+          'on-surface': '#1a2332',
+        },
+        fontFamily: {
+          headline: ['Josefin Sans', 'sans-serif'],
+          body: ['Barlow', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+  .floating { animation: float 6s ease-in-out infinite; }
+  
+  .glass-3d {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 32, 67, 0.08);
+  }
+
+  .thermal-gradient {
+    background: linear-gradient(135deg, #284b63 0%, #3b5f7a 100%);
+  }
+
+  /* ── 3D INTRO LOADER MODEL ── */
+  body.intro-active { overflow: hidden; }
+  #intro-overlay {
+      position: fixed; inset: 0; z-index: 99999;
+      background: #ffffff;
+      display: flex; align-items: center; justify-content: center;
+      perspective: 1200px;
+  }
+  .intro-card-3d {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 40px 60px;
+      border-radius: 20px;
+      display: flex; flex-direction: column; align-items: center;
+      box-shadow: 0 40px 80px rgba(0, 32, 67, 0.12), inset 0 0 40px rgba(255, 255, 255, 1);
+      opacity: 0;
+      transform: rotateX(15deg) rotateY(-15deg) scale(0.92);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      will-change: transform;
+  }
+  .intro-card-3d.revealed { opacity: 1; transform: rotateX(15deg) rotateY(-15deg) scale(1); }
+  .intro-logo-3d { width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px; }
+  .intro-brand-3d {
+      font-family: 'Josefin Sans', sans-serif; font-size: 22px; font-weight: 900;
+      letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 4px; color: #284b63;
+  }
+  .intro-tag-3d { font-family: 'Barlow', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #b5b5b5; }
+  .intro-loader-bar { width: 180px; height: 3px; background: #f3f4f6; margin-top: 30px; border-radius: 10px; overflow: hidden; position: relative; }
+  .intro-loader-fill { height: 100%; width: 0; background: #b5b5b5; transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
+  #intro-overlay.phase-exit { animation: introExit 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  @keyframes introExit { to { transform: translateY(-100%); opacity: 0; filter: blur(20px); } }
+  
+  #main-content { opacity: 0; transition: opacity 0.5s ease; }
+  #main-content.revealed { opacity: 1; }
+    @media(max-width:767px) {
+      /* ── BRAND HEADER MOBILE REFINEMENT ── */
+      #brandName { font-size: 17.3px !important; }
+      #brandName span:last-child { font-size: 0.6em !important; }
+      #brandTag { font-size: 10.6px !important; letter-spacing: normal !important; text-align: left !important; }
+    }
+</style>
+
+  <!-- Advanced Local SEO Core -->
+  <meta name="geo.placename" content="Hyderabad, Telangana, India">
+  <meta name="DC.language" content="en-IN">
+  <link rel="alternate" hreflang="en-in" href="https://www.ashaforging.com/">
+  <link rel="alternate" hreflang="x-default" href="https://www.ashaforging.com/">
+
+</head>
+<body class="bg-surface text-on-surface font-body intro-active overflow-hidden">
+
+<!-- ═══ 3D INTRO LOADER MODEL ═══ -->
+<div id="intro-overlay" role="status" aria-label="Loading Sri Asha Forgings">
+  <div class="intro-card-3d" id="introCard">
+    <img class="intro-logo-3d logo-theme-color"
+      src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp"
+      width="100" height="100"
+      alt="Sri Asha Forgings Logo">
+    <div class="intro-text-3d">
+      <div class="intro-brand-3d">SRI ASHA <span class="text-[#b5b5b5]">FORGINGS</span> <span class="text-[#b5b5b5] text-[0.6em] normal-case">Pvt Ltd</span></div>
+      <div class="intro-tag-3d">Specialist In Aluminium Alloy Forgings</div>
+    </div>
+    <div class="intro-loader-bar">
+      <div class="intro-loader-fill" id="introBarFill"></div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" class="min-h-screen flex flex-col items-center justify-center relative p-6">
+  <!-- Background Decorative Elements -->
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden -z-10">
+    <div class="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]"></div>
+  </div>
+
+  <div class="max-w-2xl w-full text-center relative z-10 glass-3d p-10 md:p-16 rounded-[32px] border border-white/40 shadow-2xl">
+    <!-- Animated Logo -->
+    <div class="floating mb-10 flex justify-center">
+      <img src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp" alt="Sri Asha Forgings Logo" class="h-24 md:h-32 w-auto">
+    </div>
+
+    <!-- Error Text -->
+    <div class="relative inline-block mb-6">
+        <h1 class="text-[120px] md:text-[160px] font-headline font-black text-primary/10 leading-none select-none">404</h1>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h2 class="text-3xl md:text-4xl font-headline font-bold text-primary uppercase tracking-tighter">LOST AT SEA?</h2>
+        </div>
+    </div>
+
+    <p class="text-lg md:text-xl text-slate-500 font-light mb-10 max-w-md mx-auto leading-relaxed">
+        The forged path you're looking for doesn't exist. Let's get you back to the core manufacturing.
+    </p>
+
+    <!-- Call to Action -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/" class="thermal-gradient text-white px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:-translate-y-1 transition-transform inline-flex items-center gap-2 group">
+            <span class="material-symbols-outlined text-[20px]">home</span>
+            BACK TO HOME
+        </a>
+        <a href="/gallery" class="border-2 border-primary/20 text-primary px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary/5 transition-colors">
+            BROWSE GALLERY
+        </a>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="mt-12 pt-8 border-t border-slate-100">
+        <span class="text-[10px] font-headline font-bold uppercase tracking-[0.3em] text-slate-400 mb-6 block">EXPLORE MORE</span>
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+            <a href="/about" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">ABOUT US</a>
+            <a href="/metallurgy" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">METALLURGY</a>
+            <a href="/terms" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">TERMS</a>
+            <a href="/privacy" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">PRIVACY</a>
+            <a href="/faqs" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">FAQS</a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Footer Credit -->
+  <div class="mt-10 text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+    &copy; 2026 Sri Asha Forgings Pvt. Ltd.
+  </div>
+</div>
+
+<script>
+    (function(){
+        const overlay = document.getElementById('intro-overlay');
+        const barFill = document.getElementById('introBarFill');
+        const mainWrap = document.getElementById('main-content');
+        const introCard = document.getElementById('introCard');
+        if(overlay && barFill && mainWrap && introCard){
+            // Start Fill
+            requestAnimationFrame(() => {
+                introCard.classList.add('revealed');
+                barFill.style.width = '100%';
+            });
+            // Exit Phase
+            setTimeout(() => {
+                overlay.classList.add('phase-exit');
+            }, 800);
+            // Cleanup
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                document.body.classList.remove('intro-active');
+                document.body.classList.remove('overflow-hidden');
+                mainWrap.classList.add('revealed');
+            }, 1000);
+        }
+    })();
+</script>
+
+  <!-- Offline Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').catch(function(err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
+    <!-- Page Transition Interceptor -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        // ── LOCAL FILE LINK FIXER (Protocol-agnostic) ──
+        if (window.location.protocol === 'file:') {
+          document.querySelectorAll('a').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('/') && !href.startsWith('//')) {
+              if (href === '/') {
+                link.setAttribute('href', 'index.html');
+              } else {
+                const base = href.split('#')[0].split('?')[0];
+                const hash = href.includes('#') ? '#' + href.split('#')[1] : '';
+                const fileMap = {
+                  '/faqs': 'Faqs.html',
+                  '/terms': 'Terms.html',
+                  '/privacy': 'privacypolicy.html'
+                };
+                const fileName = fileMap[base] || (base.substring(1) + '.html');
+                link.setAttribute('href', fileName + hash);
+              }
+            }
+          });
+        }
+
+        document.querySelectorAll('a').forEach(link => {
+          const hrefAttr = link.getAttribute('href');
+          const isInternal = link.hostname === window.location.hostname || !link.hostname;
+          const isSpecial = hrefAttr && (hrefAttr.startsWith('tel:') || hrefAttr.startsWith('mailto:'));
+          const isAnchor = hrefAttr && hrefAttr.startsWith('#');
+
+          if (isInternal && !isSpecial && !isAnchor) {
+            link.addEventListener('click', function(e) {
+              if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
+              
+              const targetPath = this.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+              const currentPath = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+              
+              if (targetPath === currentPath) {
+                if (!this.hash) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                return;
+              }
+
+              e.preventDefault();
+              const targetUrl = this.href;
+              const overlay = document.getElementById('intro-overlay');
+              
+              if (overlay) {
+                overlay.classList.remove('phase-exit');
+                overlay.style.display = 'flex';
+                overlay.style.visibility = 'visible';
+                overlay.style.opacity = '1';
+                
+                const barFill = document.getElementById('introBarFill');
+                if (barFill) {
+                  barFill.style.transition = 'none';
+                  barFill.style.width = '0%';
+                  setTimeout(() => {
+                    barFill.style.transition = 'width 1s cubic-bezier(0.65, 0, 0.35, 1)';
+                    barFill.style.width = '100%';
+                  }, 10);
+                }
+                
+                setTimeout(() => {
+                  window.location.href = targetUrl;
+                }, 400); 
+              } else {
+                window.location.href = targetUrl;
+              }
+            });
+          }
+        });
+      });
+    </script>
+
+
+</body>
+</html>

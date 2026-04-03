@@ -1,0 +1,30 @@
+# Sri Asha Forgings — Cloudflare Pages Redirects
+
+# 1. Clean Root
+/home               /               301
+/home.html          /               301
+/index-new          /               301
+/index-new.html     /               301
+
+# 2. Main Pages
+/about              /about.html     301
+/about-us           /about.html     301
+
+/gallery            /gallery.html   301
+/images             /gallery.html   301
+
+/metallurgy         /metallurgy.html  301
+/reports            /metallurgy.html  301
+
+# 3. Utility Pages
+/faqs               /Faqs.html      301
+/faq                /Faqs.html      301
+
+/privacy            /privacypolicy.html  301
+/privacy-policy     /privacypolicy.html  301
+
+/terms              /Terms.html     301
+/terms-of-service   /Terms.html     301
+
+/contact            /#contact       301
+/contact-us         /#contact       301
