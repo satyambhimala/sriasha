@@ -451,10 +451,10 @@
 
       <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-        <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
-        <a href="about.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
-        <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-        <a href="metallurgy.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Metallurgy</a>
+        <a href="/" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
+        <a href="/about" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
+        <a href="/gallery" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
+        <a href="/metallurgy" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Metallurgy</a>
         <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger" title="Request a Quote">Quote</a>
       </div>
 
@@ -469,10 +469,10 @@
 
       <!-- Mobile Menu (Hidden on desktop) -->
       <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="metallurgy.html">Metallurgy</a>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/metallurgy">Metallurgy</a>
         <a href="index.html#contact" title="Request a Quote">Request a Quote</a>
       </nav>
     </nav>
@@ -808,14 +808,13 @@
         <div class="col-span-1 md:col-span-1 pr-2">
           <h4 class="font-headline font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] mb-4 md:mb-8 text-[#b5b5b5]">Pages</h4>
           <ul class="space-y-2 md:space-y-4 font-body font-light text-slate-300 text-[10.5px] md:text-sm">
-            <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
-            <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
-            <li><a class="hover:text-white transition-colors" href="metallurgy.html">Metallurgical Reports</a></li>
-            <li><a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a></li>
-            <li><a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
-        <a class="hover:text-white transition-colors" href="llms.txt">llms.txt</a></li>
-            <li><a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a></li>
+            <li><a class="hover:text-white transition-colors" href="/">Home</a></li>
+            <li><a class="hover:text-white transition-colors" href="/about">About Us</a></li>
+            <li><a class="hover:text-white transition-colors" href="/gallery">Gallery</a></li>
+            <li><a class="hover:text-white transition-colors" href="/metallurgy">Metallurgical Reports</a></li>
+            <li><a class="hover:text-white transition-colors" href="/terms">Terms &amp; Conditions</a></li>
+            <li><a class="hover:text-white transition-colors" href="/privacy">Privacy Policy</a></li>
+            <li><a class="hover:text-white transition-colors" href="/faqs">FAQs</a></li>
           </ul>
         </div>
         <div class="col-span-1 md:col-span-1">
@@ -841,10 +840,9 @@
         <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 text-sm font-body">
           <span>&copy; 2026 Sri Asha Forgings Pvt. Ltd. All rights reserved.</span>
           <div class="flex gap-6">
-            <a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
-        <a class="hover:text-white transition-colors" href="llms.txt">llms.txt</a>
-            <a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a>
-            <a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a>
+            <a class="hover:text-white transition-colors" href="/privacy">Privacy Policy</a>
+            <a class="hover:text-white transition-colors" href="/terms">Terms &amp; Conditions</a>
+            <a class="hover:text-white transition-colors" href="/faqs">FAQs</a>
           </div>
         </div>
         <div class="text-center mt-8 pt-8 border-t border-white/5">
@@ -988,8 +986,10 @@
       document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('a').forEach(link => {
           if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('href').startsWith('tel:') && !link.getAttribute('href').startsWith('mailto:')) {
-            // Only trigger if going to a different page route
-            if (link.pathname !== window.location.pathname) {
+            
+            // Only trigger if going to a different route (Path Aware)
+            const getCleanPath = (p) => p.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+            if (getCleanPath(link.pathname) !== getCleanPath(window.location.pathname)) {
               link.addEventListener('click', function(e) {
                 // Allow new tab clicks to work normally
                 if (e.ctrlKey || e.metaKey || this.target === '_blank') return;

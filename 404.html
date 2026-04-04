@@ -158,11 +158,11 @@
 
     <!-- Call to Action -->
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="index.html" class="thermal-gradient text-white px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:-translate-y-1 transition-transform inline-flex items-center gap-2 group">
+        <a href="/" class="thermal-gradient text-white px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:-translate-y-1 transition-transform inline-flex items-center gap-2 group">
             <span class="material-symbols-outlined text-[20px]">home</span>
             BACK TO HOME
         </a>
-        <a href="gallery.html" class="border-2 border-primary/20 text-primary px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary/5 transition-colors">
+        <a href="/gallery" class="border-2 border-primary/20 text-primary px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary/5 transition-colors">
             BROWSE GALLERY
         </a>
     </div>
@@ -171,11 +171,11 @@
     <div class="mt-12 pt-8 border-t border-slate-100">
         <span class="text-[10px] font-headline font-bold uppercase tracking-[0.3em] text-slate-400 mb-6 block">EXPLORE MORE</span>
         <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
-            <a href="about.html" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">ABOUT US</a>
-            <a href="metallurgy.html" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">METALLURGY</a>
-            <a href="Terms.html" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">TERMS</a>
-            <a href="privacypolicy.html" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">PRIVACY</a>
-            <a href="Faqs.html" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">FAQS</a>
+            <a href="/about" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">ABOUT US</a>
+            <a href="/metallurgy" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">METALLURGY</a>
+            <a href="/terms" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">TERMS</a>
+            <a href="/privacy" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">PRIVACY</a>
+            <a href="/faqs" class="text-xs font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest">FAQS</a>
         </div>
     </div>
   </div>
@@ -229,8 +229,10 @@
       document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('a').forEach(link => {
           if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('href').startsWith('tel:') && !link.getAttribute('href').startsWith('mailto:')) {
-            // Only trigger if going to a different page route
-            if (link.pathname !== window.location.pathname) {
+            
+            // Only trigger if going to a different route (Path Aware)
+            const getCleanPath = (p) => p.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+            if (getCleanPath(link.pathname) !== getCleanPath(window.location.pathname)) {
               link.addEventListener('click', function(e) {
                 // Allow new tab clicks to work normally
                 if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
