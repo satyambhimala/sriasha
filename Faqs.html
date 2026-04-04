@@ -17,7 +17,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sri Asha Forgings Pvt. Ltd. — Frequently Asked Questions about our aluminium alloy forging expertise.">
+    <meta name="description" content="India's leading manufacturer of precision aluminium alloy forgings since 2004. Experts in Aerospace, Defence & Automotive sectors. Based in Hyderabad, India.">
     
     
     
@@ -38,7 +38,7 @@
     
     <meta name="geo.position" content="17.4239;78.5563">
     <meta name="ICBM" content="17.4239, 78.5563">
-    <title>FAQs | Sri Asha Forgings Pvt. Ltd.</title>
+    <title>Sri Asha Forgings | Precision Aluminium Alloy Forgings</title>
 <link rel="icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
 <link rel="shortcut icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
 <link rel="apple-touch-icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
@@ -198,17 +198,26 @@
         .navbar-transition { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 
         /* ── MOBILE ── */
-        .mobile-menu { 
-            display: none; flex-direction: column; width: 100%; order: 10; 
-            border-top: 1px solid rgba(40,75,99,0.1); margin-top: 12px; padding-top: 8px; 
-        }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a {
-            font-family: 'Josefin Sans', sans-serif; font-size: 14px; font-weight: 600; color: #284b63;
-            padding: 14px 4px; border-bottom: 1px solid rgba(40,75,99,0.05);
-            letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s, padding-left 0.2s;
-        }
-        .mobile-menu a:hover { color: #b5b5b5; padding-left: 8px; }
+          .mobile-menu {
+    display: none; flex-direction: column; width: 100%;
+    position: absolute; top: calc(100% + 4px); left: 0;
+    background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(16px);
+    border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+    padding: 8px; border: 1px solid rgba(0,0,0,0.05);
+  }
+  .metallurgy-slide {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0;
+  }
+  .metallurgy-slide.active { opacity: 1; position: relative; z-index: 1; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Josefin Sans', sans-serif; font-size: 14px; font-weight: 700; color: #284b63;
+    padding: 14px 12px; border-bottom: 1px solid rgba(0,0,0,0.04);
+    letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.2s; border-radius: 6px;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: #17365d; background-color: rgba(40,75,99,0.06); padding-left: 18px; }
 
         @media(max-width:767px) {
             /* ── GLOBAL MOBILE TYPOGRAPHY ── */
@@ -361,19 +370,21 @@
 
     <div id="main-content">
     <!-- ═══ NAVBAR (Global Site-wide Navigation) ═══ -->
-    <nav id="topNav"
-      class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex md:flex-nowrap flex-wrap justify-between items-center milled-edge navbar-transition">
-      <div class="flex items-center gap-1.5 md:gap-2">
+    <nav id="topNav" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex flex-nowrap justify-between items-center navbar-transition">
+      <div class="flex items-center gap-1.5 md:gap-2 max-w-[calc(100%-60px)] md:max-w-none">
         <img src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp"
-          alt="Sri Asha Forgings Logo" width="64" height="64"
-          class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
+          alt="Sri Asha Forgings Logo" width="64" height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
         <div class="flex flex-col justify-center w-fit">
-          <div id="brandName" class="text-[25.1px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
-        SRI ASHA <span class="text-secondary ml-1.5 sm:ml-2">FORGINGS</span> <span class="text-secondary text-[0.6em] sm:text-[0.45em] md:text-[0.51em] ml-1.5 normal-case font-bold tracking-normal">Pvt Ltd</span>
-      </div>
-      <div id="brandTag" class="text-[9px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
-        Specialist In Aluminium Alloy Forgings
-      </div>
+          <div id="brandName"
+            class="text-[25.1px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
+            SRI ASHA <span class="text-secondary ml-1.5 sm:ml-2">FORGINGS</span> <span
+              class="text-secondary text-[0.6em] sm:text-[0.45em] md:text-[0.51em] ml-1.5 normal-case font-bold tracking-normal">Pvt
+              Ltd</span>
+          </div>
+      <div id="brandTag"
+            class="text-[9px] sm:text-[10px] md:text-[12.5px] font-bold text-secondary uppercase leading-none mt-0.5 md:mt-0.5 whitespace-nowrap transition-colors duration-500 tracking-[0.14em] md:tracking-[0.16em]">
+            Specialist In Aluminium Alloy Forgings
+          </div>
         </div>
       </div>
 
@@ -382,14 +393,17 @@
         <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
         <a href="about.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
         <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-        <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger" title="Request a Quote">Request a Quote</a>
+        <a href="metallurgy.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Metallurgy</a>
+        <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger" title="Request a Quote">Quote</a>
       </div>
 
       <!-- Mobile toggle (3 Dots) -->
-      <button class="md:hidden thermal-gradient-3d text-white w-4 h-8 rounded-[3px] shadow-md flex flex-col items-center justify-center gap-1" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <div class="w-1 h-1 bg-white rounded-full"></div>
-        <div class="w-1 h-1 bg-white rounded-full"></div>
-        <div class="w-1 h-1 bg-white rounded-full"></div>
+      <button
+        class="md:hidden shrink-0 thermal-gradient-3d text-white w-10 h-10 rounded-lg shadow-md flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform"
+        id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
       </button>
 
       <!-- Mobile Menu (Hidden on desktop) -->
@@ -397,6 +411,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="gallery.html">Gallery</a>
+        <a href="metallurgy.html">Metallurgy</a>
         <a href="index.html#contact" title="Request a Quote">Request a Quote</a>
       </nav>
     </nav>
@@ -573,7 +588,8 @@
             <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
             <li><a class="hover:text-white transition-colors" href="metallurgy.html">Metallurgical Reports</a></li>
             <li><a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a></li>
-            <li><a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="llms.txt">llms.txt</a></li>
             <li><a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a></li>
           </ul>
         </div>
@@ -601,6 +617,7 @@
           <span>&copy; 2026 Sri Asha Forgings Pvt. Ltd. All rights reserved.</span>
           <div class="flex gap-6">
             <a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="llms.txt">llms.txt</a>
             <a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a>
             <a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a>
           </div>
@@ -699,9 +716,7 @@
                 });
             }
         })();
-
-
-    </script>
+</script>
 
   <!-- Offline Service Worker -->
   <script>
@@ -713,6 +728,54 @@
       });
     }
   </script>
+
+    <!-- Page Transition Interceptor -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('a').forEach(link => {
+          if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('href').startsWith('tel:') && !link.getAttribute('href').startsWith('mailto:')) {
+            // Only trigger if going to a different page route
+            if (link.pathname !== window.location.pathname) {
+              link.addEventListener('click', function(e) {
+                // Allow new tab clicks to work normally
+                if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
+                
+                e.preventDefault();
+                const href = this.href;
+                const overlay = document.getElementById('intro-overlay');
+                
+                if (overlay) {
+                  // Re-enable and show the 3D loader
+                  overlay.classList.remove('phase-exit');
+                  overlay.style.display = 'flex';
+                  overlay.style.visibility = 'visible';
+                  overlay.style.opacity = '1';
+                  
+                  // Restart the loader animation bar
+                  const barFill = document.getElementById('introBarFill');
+                  if (barFill) {
+                    barFill.style.transition = 'none';
+                    barFill.style.width = '0%';
+                    setTimeout(() => {
+                      barFill.style.transition = 'width 1s cubic-bezier(0.65, 0, 0.35, 1)';
+                      barFill.style.width = '60%';
+                    }, 10);
+                  }
+                  
+                  // Navigate in background while loader processes
+                  setTimeout(() => {
+                    window.location.href = href;
+                  }, 150);
+                } else {
+                  window.location.href = href;
+                }
+              });
+            }
+          }
+        });
+      });
+    </script>
+
 </body>
 
 </html>

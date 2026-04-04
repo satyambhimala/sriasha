@@ -13,16 +13,14 @@
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>Sri Asha Forgings Pvt. Ltd. | Specialists In Aluminium Alloy Forgings | Hyderabad, India</title>
+  <title>Sri Asha Forgings | Precision Aluminium Alloy Forgings</title>
   <link rel="icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
   <link rel="shortcut icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
   <link rel="apple-touch-icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
 
 
-  
 
-  <meta name="description"
-    content="Sri Asha Forgings Pvt. Ltd. — India's leading manufacturer of precision aluminium alloy open die forgings since 2004. Specialists in Aerospace, Defence, Automotive & Heavy Engineering. Hyderabad, India.">
+  <meta name="description" content="India's leading manufacturer of precision aluminium alloy forgings since 2004. Experts in Aerospace, Defence & Automotive sectors. Based in Hyderabad, India.">
 
 
   <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
@@ -968,52 +966,26 @@
     }
 
     /* ── MOBILE ── */
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      order: 10;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 12px;
-      padding-top: 8px;
-    }
-
-    .metallurgy-slide {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
-      opacity: 0;
-    }
-
-    .metallurgy-slide.active {
-      opacity: 1;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mobile-menu.open {
-      display: flex;
-    }
-
-    .mobile-menu a {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: inherit;
-      padding: 14px 4px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s, padding-left 0.2s;
-    }
-
-    .mobile-menu a:hover {
-      color: #b5b5b5;
-      padding-left: 8px;
-    }
+      .mobile-menu {
+    display: none; flex-direction: column; width: 100%;
+    position: absolute; top: calc(100% + 4px); left: 0;
+    background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(16px);
+    border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+    padding: 8px; border: 1px solid rgba(0,0,0,0.05);
+  }
+  .metallurgy-slide {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0;
+  }
+  .metallurgy-slide.active { opacity: 1; position: relative; z-index: 1; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Josefin Sans', sans-serif; font-size: 14px; font-weight: 700; color: #284b63;
+    padding: 14px 12px; border-bottom: 1px solid rgba(0,0,0,0.04);
+    letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.2s; border-radius: 6px;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: #17365d; background-color: rgba(40,75,99,0.06); padding-left: 18px; }
 
     @supports(padding:env(safe-area-inset-bottom)) {
       #wa-btn {
@@ -1632,6 +1604,51 @@
 }
 </script>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sri Asha Forgings",
+  "url": "https://www.ashaforging.com",
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Sai Rohit Chowdary",
+      "jobTitle": "Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sri Asha Forgings"
+      },
+      "url": "https://www.ashaforging.com"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Sai Rohit Chowdary",
+    "jobTitle": "Director & Founder"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Sri Asha Forgings",
+  "url": "https://www.ashaforging.com",
+  "creator": {
+    "@type": "Person",
+    "name": "Bhimala Satyam",
+    "jobTitle": "Web Designer & Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Sri Asha Forgings"
+    }
+  }
+}
+</script>
+
 </head>
 
 <body
@@ -1658,8 +1675,8 @@
     </div>
     <!-- ═══ NAVBAR (Global Site-wide Navigation) ═══ -->
     <nav id="topNav"
-      class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex flex-wrap justify-between items-center milled-edge navbar-transition">
-      <div class="flex items-center gap-1.5 md:gap-2"> <img
+      class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex flex-nowrap justify-between items-center milled-edge navbar-transition">
+      <div class="flex items-center gap-1.5 md:gap-2 max-w-[calc(100%-60px)] md:max-w-none"> <img
           src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp" alt="Sri Asha Forgings Logo" width="64"
           height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
         <div class="flex flex-col justify-center w-fit">
@@ -1675,26 +1692,25 @@
           </div>
         </div>
       </div> <!-- Desktop Nav Links -->
-      <div class="hidden md:flex items-center space-x-6 lg:space-x-8"> <a href="index.html"
-          class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
-        <a href="about.html"
-          class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
-        <a href="gallery.html"
-          class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
-        <a href="index.html#contact"
-          class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger" title="Request a Quote">Get
-          Quote</a> </div> <button
-        class="md:hidden thermal-gradient-3d text-white w-4 h-8 rounded-[3px] shadow-md flex flex-col items-center justify-center gap-1"
+      <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <a href="index.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Home</a>
+        <a href="about.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">About</a>
+        <a href="gallery.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Gallery</a>
+        <a href="metallurgy.html" class="text-primary/70 hover:text-secondary transition-all font-headline font-bold tracking-tight uppercase text-xs">Metallurgy</a>
+        <a href="index.html#contact" class="thermal-gradient-3d text-white px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-wider text-[10px] hover:translate-y-[-2px] transition-transform active:scale-95 shadow-lg contact-trigger" title="Request a Quote">Quote</a>
+      </div> <button
+        class="md:hidden shrink-0 thermal-gradient-3d text-white w-10 h-10 rounded-lg shadow-md flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform"
         id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <div class="w-1 h-1 bg-white rounded-full">
-        </div>
-        <div class="w-1 h-1 bg-white rounded-full">
-        </div>
-        <div class="w-1 h-1 bg-white rounded-full">
-        </div>
+        <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
       </button> <!-- Mobile Menu (Hidden on desktop) -->
-      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation"> <a href="index.html">Home</a> <a
-          href="about.html">About Us</a> <a href="gallery.html">Gallery</a> <a href="index.html#contact" title="Request a Quote">Request a Quote</a>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="metallurgy.html">Metallurgy</a>
+        <a href="index.html#contact" title="Request a Quote">Request a Quote</a>
       </nav>
     </nav>
     <!-- ═══ HERO (design from tes.html layout, all images/data from index.html) ═══ -->
@@ -1718,7 +1734,7 @@
           <div class="md:hidden relative group mb-8">
             <div
               class="bg-white rounded-[32px] p-2 relative overflow-hidden transition-transform duration-700 aspect-video product-plane shadow-2xl">
-              <div class="w-full h-full rounded-[24px] overflow-hidden relative"> <img alt="Forged Rings Banner"
+              <div class="w-full h-full rounded-[24px] overflow-hidden relative bg-[#0a1118]"> <img alt="Forged Rings Banner"
                   class="hero-crossfade-img"
                   src="images/Bvgg5wXF_pasted-image-2026-03-27T21-08-00-975Z-cropped-processed-by-imagy.webp"
                   fetchpriority="high" width="800" height="450" decoding="async" /> <img alt="T-Shaped Forging banner"
@@ -1767,7 +1783,7 @@
           <div class="relative group">
             <div
               class="bg-white rounded-[32px] p-2 relative overflow-hidden transition-transform duration-700 aspect-video product-plane shadow-2xl">
-              <div class="w-full h-full rounded-[28px] overflow-hidden relative"> <img alt="Forged Rings Banner"
+              <div class="w-full h-full rounded-[28px] overflow-hidden relative bg-[#0a1118]"> <img alt="Forged Rings Banner"
                   class="hero-crossfade-img"
                   src="images/Bvgg5wXF_pasted-image-2026-03-27T21-08-00-975Z-cropped-processed-by-imagy.webp"
                   fetchpriority="high" width="1200" height="675" decoding="async" /> <img alt="T-Shaped Forging banner"
@@ -2260,35 +2276,35 @@
             <div class="industry-card-label">Power Generation</div>
           </div> <!-- duplicates for seamless loop -->
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/j5Tyczb8_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/j5Tyczb8_image.webp" width="200" height="150" alt="Aerospace Forging Supplier India open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Aerospace</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/TPVDKpDt_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/TPVDKpDt_image.webp" width="200" height="150" alt="Defence Forging Manufacturer India open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Defence</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/TY7wP0Sh_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/TY7wP0Sh_image.webp" width="200" height="150" alt="Space and Satellites Forging open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Space / Satellites</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/Bv08f4V2_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/Bv08f4V2_image.webp" width="200" height="150" alt="Automotive Aluminium Forging open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Automotive</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/MpkH1zxt_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/MpkH1zxt_image.webp" width="200" height="150" alt="Heavy Engineering Forging Components open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Heavy Engineering</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/mkvL3Sxw_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/mkvL3Sxw_image.webp" width="200" height="150" alt="Industrial Machinery Aluminium Forgings open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Industrial Machinery</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/kgFJ88TJ_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/kgFJ88TJ_image.webp" width="200" height="150" alt="Oil and Gas Forged Components open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Oil &amp; Gas</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
-            <img src="images/141SV56v_image.webp" width="200" height="150" alt="" decoding="async">
+            <img src="images/141SV56v_image.webp" width="200" height="150" alt="Power Generation Aluminium Forgings open die forging Hyderabad India" decoding="async">
             <div class="industry-card-label">Power Generation</div>
           </div>
         </div>
@@ -2351,116 +2367,116 @@
         </button>
         <div class="equip-track" id="equipTrack">
           <div class="equip-card contact-trigger">
-            <img src="images/8CG8Szgf_image.webp" width="310" height="220" alt="3.15 Ton Open Die Russian Hammer open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
+            <img src="images/8CG8Szgf_image.webp" width="310" height="220" alt="3.15 Ton Open Die Russian Hammer at Sri Asha Forgings open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
               decoding="async">
             <h3>3.15 Ton Open Die Russian Hammer</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/2jP4JzSM_Whats-App-Image-2026-03-16-at-7-08-04-PM.webp" width="310" height="220"
-              alt="2 Ton Masse Hammer Forging open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+              alt="2 Ton Masse Hammer at manufacturing facility open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>2 Ton Masse Hammer</h3>
           </div>
           <div class="equip-card contact-trigger">
-            <img src="images/ydz82Hvn_image.webp" width="310" height="220" alt="2500 Ton Hydraulic Press open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
+            <img src="images/ydz82Hvn_image.webp" width="310" height="220" alt="2500 Ton Hydraulic Press for Precision Forging open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
               decoding="async">
             <h3>2500 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger">
-            <img src="images/zBGjJ0mz_image.webp" width="310" height="220" alt="1200 Ton Hydraulic Press open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
+            <img src="images/zBGjJ0mz_image.webp" width="310" height="220" alt="1200 Ton Hydraulic Press Infrastructure open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
               decoding="async">
             <h3>1200 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/SN4NKDGV_Whats-App-Image-2026-03-11-at-4-36-40-PM.webp" width="310" height="220"
-              alt="Drop Bottom Furnace Sri Asha Forgings open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+              alt="Drop Bottom Furnace for Aluminium Heat Treatment open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>Drop Bottom Furnace</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/VLqR0ckT_Whats-App-Image-2026-03-28-at-3-13-42-PM.webp" width="310" height="220"
-              alt="Cutting Machine open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+              alt="Heavy Duty Cutting Machine open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/xCsLh8N2_Whats-App-Image-2026-04-01-at-1-45-15-PM.webp" width="310" height="220"
-              alt="Specialized Cutting Machine Facility open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+              alt="Precision Aluminium Forging Component open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger">
-            <img src="images/Hkg5TKQS_image.webp" width="310" height="220" alt="Pit Furnace open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+            <img src="images/Hkg5TKQS_image.webp" width="310" height="220" alt="Specialized Forging Process Detail open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>Pit Furnace</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/nhdqqVbG_Whats-App-Image-2026-03-28-at-3-29-30-PM.webp" width="310" height="220"
-              alt="Krautkramer USM UT machine open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+              alt="Ultrasonic Testing Krautkramer USM machine open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>Krautkramer USM UT machine</h3>
           </div>
           <div class="equip-card contact-trigger">
-            <img src="images/SR23djRW_image.webp" width="310" height="220" alt="Digiscan EEC UT machine open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
+            <img src="images/SR23djRW_image.webp" width="310" height="220" alt="Quality Controlled Forging Output open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
               decoding="async">
             <h3>Digiscan EEC UT machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/1XxG4WhN_Whats-App-Image-2026-03-28-at-3-15-09-PM.webp" width="310" height="220"
-              alt="FIE Tensile Test Machine open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
+              alt="FIE Tensile Test Machine Quality Assurance open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging" decoding="async">
             <h3>FIE Tensile Test Machine</h3>
           </div>
           <div class="equip-card contact-trigger">
-            <img src="images/02J1dXKm_image.webp" width="310" height="220" alt="Electrical conductivity meter open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
+            <img src="images/02J1dXKm_image.webp" width="310" height="220" alt="Final Precision Forged Product open die forging Hyderabad India" title="Sri Asha Forgings - Precision Forging"
               decoding="async">
             <h3>Electrical conductivity meter</h3>
           </div> <!-- duplicates -->
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/8CG8Szgf_image.webp" width="310" height="220" alt="" decoding="async">
+            <img src="images/8CG8Szgf_image.webp" width="310" height="220" alt="3.15 Ton Open Die Russian Hammer at Sri Asha Forgings open die forging Hyderabad India" decoding="async">
             <h3>3.15 Ton Open Die Russian Hammer</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/2jP4JzSM_Whats-App-Image-2026-03-16-at-7-08-04-PM.webp" width="310" height="220" alt=""
+            <img src="images/2jP4JzSM_Whats-App-Image-2026-03-16-at-7-08-04-PM.webp" width="310" height="220" alt="2 Ton Masse Hammer at manufacturing facility open die forging Hyderabad India"
               decoding="async">
             <h3>2 Ton Masse Hammer</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/ydz82Hvn_image.webp" width="310" height="220" alt="" decoding="async">
+            <img src="images/ydz82Hvn_image.webp" width="310" height="220" alt="2500 Ton Hydraulic Press for Precision Forging open die forging Hyderabad India" decoding="async">
             <h3>2500 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/zBGjJ0mz_image.webp" width="310" height="220" alt="" decoding="async">
+            <img src="images/zBGjJ0mz_image.webp" width="310" height="220" alt="1200 Ton Hydraulic Press Infrastructure open die forging Hyderabad India" decoding="async">
             <h3>1200 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/SN4NKDGV_Whats-App-Image-2026-03-11-at-4-36-40-PM.webp" width="310" height="220" alt=""
+            <img src="images/SN4NKDGV_Whats-App-Image-2026-03-11-at-4-36-40-PM.webp" width="310" height="220" alt="Drop Bottom Furnace for Aluminium Heat Treatment open die forging Hyderabad India"
               decoding="async">
             <h3>Drop Bottom Furnace</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/VLqR0ckT_Whats-App-Image-2026-03-28-at-3-13-42-PM.webp" width="310" height="220" alt=""
+            <img src="images/VLqR0ckT_Whats-App-Image-2026-03-28-at-3-13-42-PM.webp" width="310" height="220" alt="Heavy Duty Cutting Machine open die forging Hyderabad India"
               decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/xCsLh8N2_Whats-App-Image-2026-04-01-at-1-45-15-PM.webp" width="310" height="220" alt=""
+            <img src="images/xCsLh8N2_Whats-App-Image-2026-04-01-at-1-45-15-PM.webp" width="310" height="220" alt="Precision Aluminium Forging Component open die forging Hyderabad India"
               decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/Hkg5TKQS_image.webp" width="310" height="220" alt="" decoding="async">
+            <img src="images/Hkg5TKQS_image.webp" width="310" height="220" alt="Specialized Forging Process Detail open die forging Hyderabad India" decoding="async">
             <h3>Pit Furnace</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/nhdqqVbG_Whats-App-Image-2026-03-28-at-3-29-30-PM.webp" width="310" height="220" alt=""
+            <img src="images/nhdqqVbG_Whats-App-Image-2026-03-28-at-3-29-30-PM.webp" width="310" height="220" alt="Ultrasonic Testing Krautkramer USM machine open die forging Hyderabad India"
               decoding="async">
             <h3>Krautkramer USM UT machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/SR23djRW_image.webp" width="310" height="220" alt="" decoding="async">
+            <img src="images/SR23djRW_image.webp" width="310" height="220" alt="Quality Controlled Forging Output open die forging Hyderabad India" decoding="async">
             <h3>Digiscan EEC UT machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/1XxG4WhN_Whats-App-Image-2026-03-28-at-3-15-09-PM.webp" width="310" height="220" alt=""
+            <img src="images/1XxG4WhN_Whats-App-Image-2026-03-28-at-3-15-09-PM.webp" width="310" height="220" alt="FIE Tensile Test Machine Quality Assurance open die forging Hyderabad India"
               decoding="async">
             <h3>FIE Tensile Test Machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
-            <img src="images/02J1dXKm_image.webp" width="310" height="220" alt="" decoding="async">
+            <img src="images/02J1dXKm_image.webp" width="310" height="220" alt="Final Precision Forged Product open die forging Hyderabad India" decoding="async">
             <h3>Electrical conductivity meter</h3>
           </div>
         </div>
@@ -3226,31 +3242,16 @@
             aerospace, defence, and heavy engineering since 2004.</p>
         </div>
         <div class="col-span-1 md:col-span-1 pr-2">
-          <h4
-            class="font-headline font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] mb-4 md:mb-8 text-[#b5b5b5]">
-            Pages</h4>
+          <h4 class="font-headline font-bold uppercase text-[9px] md:text-xs tracking-[0.2em] mb-4 md:mb-8 text-[#b5b5b5]">Pages</h4>
           <ul class="space-y-2 md:space-y-4 font-body font-light text-slate-300 text-[10.5px] md:text-sm">
-            <li>
-              <a class="hover:text-white transition-colors" href="index.html">Home</a>
-            </li>
-            <li>
-              <a class="hover:text-white transition-colors" href="about.html">About Us</a>
-            </li>
-            <li>
-              <a class="hover:text-white transition-colors" href="gallery.html">Gallery</a>
-            </li>
-            <li>
-              <a class="hover:text-white transition-colors" href="metallurgy.html">Metallurgical Reports</a>
-            </li>
-            <li>
-              <a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a>
-            </li>
-            <li>
-              <a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
-            </li>
-            <li>
-              <a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a>
-            </li>
+            <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+            <li><a class="hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
+            <li><a class="hover:text-white transition-colors" href="metallurgy.html">Metallurgical Reports</a></li>
+            <li><a class="hover:text-white transition-colors" href="Terms.html">Terms &amp; Conditions</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacypolicy.html">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="llms.txt">llms.txt</a></li>
+            <li><a class="hover:text-white transition-colors" href="Faqs.html">FAQs</a></li>
           </ul>
         </div>
         <div class="col-span-1 md:col-span-1">
@@ -3822,6 +3823,54 @@
       });
     }
   </script>
+
+    <!-- Page Transition Interceptor -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('a').forEach(link => {
+          if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('href').startsWith('tel:') && !link.getAttribute('href').startsWith('mailto:')) {
+            // Only trigger if going to a different page route
+            if (link.pathname !== window.location.pathname) {
+              link.addEventListener('click', function(e) {
+                // Allow new tab clicks to work normally
+                if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
+                
+                e.preventDefault();
+                const href = this.href;
+                const overlay = document.getElementById('intro-overlay');
+                
+                if (overlay) {
+                  // Re-enable and show the 3D loader
+                  overlay.classList.remove('phase-exit');
+                  overlay.style.display = 'flex';
+                  overlay.style.visibility = 'visible';
+                  overlay.style.opacity = '1';
+                  
+                  // Restart the loader animation bar
+                  const barFill = document.getElementById('introBarFill');
+                  if (barFill) {
+                    barFill.style.transition = 'none';
+                    barFill.style.width = '0%';
+                    setTimeout(() => {
+                      barFill.style.transition = 'width 1s cubic-bezier(0.65, 0, 0.35, 1)';
+                      barFill.style.width = '60%';
+                    }, 10);
+                  }
+                  
+                  // Navigate in background while loader processes
+                  setTimeout(() => {
+                    window.location.href = href;
+                  }, 150);
+                } else {
+                  window.location.href = href;
+                }
+              });
+            }
+          }
+        });
+      });
+    </script>
+
 </body>
 
 </html>

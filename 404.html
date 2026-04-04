@@ -7,7 +7,7 @@
 <link rel="dns-prefetch" href="//i.postimg.cc">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 - Page Not Found | Sri Asha Forgings Pvt. Ltd.</title>
+<title>Sri Asha Forgings | Precision Aluminium Alloy Forgings</title>
 <link rel="icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
 <link rel="shortcut icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
 <link rel="apple-touch-icon" href="images/zfB4sy84_sri-asha-forgings-logo-_bg_.webp">
@@ -223,5 +223,53 @@
       });
     }
   </script>
+
+    <!-- Page Transition Interceptor -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('a').forEach(link => {
+          if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('href').startsWith('tel:') && !link.getAttribute('href').startsWith('mailto:')) {
+            // Only trigger if going to a different page route
+            if (link.pathname !== window.location.pathname) {
+              link.addEventListener('click', function(e) {
+                // Allow new tab clicks to work normally
+                if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
+                
+                e.preventDefault();
+                const href = this.href;
+                const overlay = document.getElementById('intro-overlay');
+                
+                if (overlay) {
+                  // Re-enable and show the 3D loader
+                  overlay.classList.remove('phase-exit');
+                  overlay.style.display = 'flex';
+                  overlay.style.visibility = 'visible';
+                  overlay.style.opacity = '1';
+                  
+                  // Restart the loader animation bar
+                  const barFill = document.getElementById('introBarFill');
+                  if (barFill) {
+                    barFill.style.transition = 'none';
+                    barFill.style.width = '0%';
+                    setTimeout(() => {
+                      barFill.style.transition = 'width 1s cubic-bezier(0.65, 0, 0.35, 1)';
+                      barFill.style.width = '60%';
+                    }, 10);
+                  }
+                  
+                  // Navigate in background while loader processes
+                  setTimeout(() => {
+                    window.location.href = href;
+                  }, 150);
+                } else {
+                  window.location.href = href;
+                }
+              });
+            }
+          }
+        });
+      });
+    </script>
+
 </body>
 </html>

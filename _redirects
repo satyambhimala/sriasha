@@ -1,33 +1,25 @@
-# ─────────────────────────────────────────────────────────────
-#  Sri Asha Forgings — Cloudflare Pages Redirects
-#  Place this file in the ROOT of your published directory.
-#  Format: [source]  [destination]  [status_code]
-# ─────────────────────────────────────────────────────────────
+# Sri Asha Forgings - Cloudflare Pages Absolute Redirects
+# Format: [source] [destination] [status]
 
-# 1. Force non-www → www (canonical domain)
-#    Cloudflare handles domain-level redirects in the Dashboard
-#    but you can also catch /path level here.
+# 1. Clean Roots
+/index.html / 301
+/home / 301
 
-# 2. Redirect bare index files → clean root
-/index.html         /               301
-/index-new.html     /               301
+# 2. Main Navigation Clean Mappings
+/about /about.html 200
+/gallery /gallery.html 200
+/metallurgy /metallurgy.html 200
+/metallurgy-reports /metallurgy.html 301
 
-# 3. Common typos / old URL patterns
-/home               /               301
-/home.html          /               301
-/index-new          /               301
+# 3. Footer & Utility Clean Mappings
+/faqs /Faqs.html 200
+/faq /Faqs.html 301
+/privacy /privacypolicy.html 200
+/terms /Terms.html 200
 
-# 4. Normalize page URLs (handle missing .html extension)
+# 4. Canonical / Common Typos
+/about-us /about.html 301
+/contact /#contact 301
 
-/faqs               /Faqs.html      301
-/faq                /Faqs.html      301
-/privacy            /privacypolicy.html  301
-/privacy-policy     /privacypolicy.html  301
-/terms              /Terms.html     301
-/terms-of-service   /Terms.html     301
-
-# 5. 404 fallback — serve custom 404 page
-# Note: 404 fallback is handled automatically by Cloudflare Pages
-# For Workers, add a not_found_handling in wrangler config instead
-
-/*  /404.html  404
+# 5. 404 Fallback
+/* /404.html 404
