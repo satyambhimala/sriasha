@@ -356,9 +356,10 @@
       header h1 { font-size: clamp(32px, 8vw, 42px) !important; line-height: 1.1 !important; }
       header h2 { font-size: 18px !important; margin-top: 8px !important; }
       header p { font-size: 14px !important; line-height: 1.6 !important; }
-      header .pt-32 { padding-top: 110px !important; }
-      header .pb-16 { padding-bottom: 30px !important; }
-      header .mt-8 { margin-top: 20px !important; }
+      header.pt-32 { padding-top: 130px !important; }
+      header.pb-16 { padding-bottom: 40px !important; }
+      header .mt-8 { margin-top: 24px !important; }
+      header .z-10 { position: relative; z-index: 20 !important; }
     }
 </style>
 
@@ -1093,6 +1094,11 @@ function initMobileMenu(){
               if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
               e.preventDefault();
               const targetHref = this.href;
+              if (targetHref === window.location.href) return;
+              if (targetHref.split('#')[0] === window.location.href.split('#')[0]) {
+                 // It's a same-page anchor, let browser handle it naturally
+                 return;
+              }
               const overlay = document.getElementById('intro-overlay');
               if (overlay) {
                 overlay.classList.remove('phase-exit');

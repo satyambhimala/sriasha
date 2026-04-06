@@ -1,25 +1,23 @@
-# Sri Asha Forgings - Cloudflare Pages Absolute Redirects
-# Format: [source] [destination] [status]
+# Sri Asha Forgings - Cloudflare Pages Optimized Redirects
+# Standardizing for Clean Extensionless URLs
 
-# 1. Clean Roots
-/index.html / 301
+# 1. Core Pages - Letting Cloudflare Native Clean URLs handle basic matching
+# Note: Rules like /about /about.html 200 are removed here because 
+# Cloudflare Pages handles these automatically without redundancy issues.
+
+# 2. Legacy and Alternate Paths (301 Permanent)
 /home / 301
+/index / 301
 
-# 2. Main Navigation Clean Mappings
-/about /about.html 200
-/gallery /gallery.html 200
-/metallurgy /metallurgy.html 200
-/metallurgy-reports /metallurgy.html 301
-
-# 3. Footer & Utility Clean Mappings
-/faqs /Faqs.html 200
-/faq /Faqs.html 301
+# 3. Clean Mappings for Specific Filenames
+# These are needed because the URL slug differs from the filename
 /privacy /privacypolicy.html 200
 /terms /Terms.html 200
+/faqs /Faqs.html 200
+/metallurgy-reports /metallurgy.html 301
 
-# 4. Canonical / Common Typos
-/about-us /about.html 301
+# 4. Global Site standardized contact link
 /contact /#contact 301
 
-# 5. 404 Fallback
+# 5. Catch-all for robust 404 handling
 /* /404.html 404

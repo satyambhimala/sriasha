@@ -4209,6 +4209,11 @@
               if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
               e.preventDefault();
               const targetHref = this.href;
+              if (targetHref === window.location.href) return;
+              if (targetHref.split('#')[0] === window.location.href.split('#')[0]) {
+                 // It's a same-page anchor, let browser handle it naturally
+                 return;
+              }
               const overlay = document.getElementById('intro-overlay');
               if (overlay) {
                 overlay.classList.remove('phase-exit');
