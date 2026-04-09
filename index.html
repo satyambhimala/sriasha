@@ -1640,29 +1640,43 @@
       display: block;
     }
 
+    .hero-line-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 50px 50px;
+      background-image:
+        linear-gradient(to right, rgba(40, 75, 99, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(40, 75, 99, 0.05) 1px, transparent 1px);
+    }
+
     @keyframes heroCrossfade {
       0% {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.02);
       }
 
-      8% {
+      2% {
         opacity: 1;
-        transform: scale(1.015);
+        visibility: visible;
+        transform: scale(1.02);
       }
 
       10% {
-        opacity: 0;
-        transform: scale(1.015);
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
       }
 
-      98% {
+      12% {
         opacity: 0;
+        visibility: hidden;
         transform: scale(1);
       }
 
       100% {
-        opacity: 1;
+        opacity: 0;
+        visibility: hidden;
         transform: scale(1);
       }
     }
@@ -1674,54 +1688,26 @@
       height: 100%;
       object-fit: cover;
       opacity: 0;
-      animation: heroCrossfade 30s infinite;
+      visibility: hidden;
+      animation: heroCrossfade 40s infinite;
       filter: brightness(0.9);
       will-change: opacity, transform;
       transform: translateZ(0);
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       animation-fill-mode: both;
     }
 
-    .hero-crossfade-img:nth-child(1) {
-      animation-delay: 0s;
-      opacity: 1;
-    }
-
-    .hero-crossfade-img:nth-child(2) {
-      animation-delay: -27s;
-    }
-
-    .hero-crossfade-img:nth-child(3) {
-      animation-delay: -24s;
-    }
-
-    .hero-crossfade-img:nth-child(4) {
-      animation-delay: -21s;
-    }
-
-    .hero-crossfade-img:nth-child(5) {
-      animation-delay: -18s;
-    }
-
-    .hero-crossfade-img:nth-child(6) {
-      animation-delay: -15s;
-    }
-
-    .hero-crossfade-img:nth-child(7) {
-      animation-delay: -12s;
-    }
-
-    .hero-crossfade-img:nth-child(8) {
-      animation-delay: -9s;
-    }
-
-    .hero-crossfade-img:nth-child(9) {
-      animation-delay: -6s;
-    }
-
-    .hero-crossfade-img:nth-child(10) {
-      animation-delay: -3s;
-    }
+    .hero-crossfade-img:nth-child(1) { animation-delay: 0s; }
+    .hero-crossfade-img:nth-child(2) { animation-delay: 4s; }
+    .hero-crossfade-img:nth-child(3) { animation-delay: 8s; }
+    .hero-crossfade-img:nth-child(4) { animation-delay: 12s; }
+    .hero-crossfade-img:nth-child(5) { animation-delay: 16s; }
+    .hero-crossfade-img:nth-child(6) { animation-delay: 20s; }
+    .hero-crossfade-img:nth-child(7) { animation-delay: 24s; }
+    .hero-crossfade-img:nth-child(8) { animation-delay: 28s; }
+    .hero-crossfade-img:nth-child(9) { animation-delay: 32s; }
+    .hero-crossfade-img:nth-child(10) { animation-delay: 36s; }
 
     /* ── 3-CARD GALLERY CROSSFADE ── */
     @keyframes cardCrossfade {
@@ -1876,8 +1862,27 @@
     </nav>
     <!-- ═══ HERO (design from tes.html layout, all images/data from index.html) ═══ -->
     <header
-      class="relative pt-32 md:pt-[220px] pb-8 min-h-[650px] flex flex-col justify-center overflow-hidden bg-surface">
-      <!-- 3D decorative background removed per user request -->
+      class="relative pt-24 md:pt-[160px] pb-8 min-h-[550px] md:min-h-[750px] flex flex-col justify-center overflow-hidden bg-white">
+      <!-- ═══ PREMIUM THEME ELEMENTS BEHIND HERO ═══ -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 bg-white">
+        <!-- Minimalist Line Grid -->
+        <div class="hero-line-grid"></div>
+        
+        <!-- Very Subtle Soft Glows -->
+        <div class="absolute top-0 right-0 w-[40%] h-full bg-gradient-to-l from-primary/[0.02] to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-[40%] h-full bg-gradient-to-r from-secondary/[0.02] to-transparent"></div>
+        
+        <!-- Clean Tech Accents -->
+        <svg class="absolute top-0 right-0 w-64 h-64 opacity-[0.1] text-primary" viewBox="0 0 100 100">
+           <path d="M100 0 L100 100 L0 100" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" />
+        </svg>
+        <svg class="absolute bottom-4 left-4 w-32 h-32 opacity-[0.1] text-secondary" viewBox="0 0 100 100">
+           <circle cx="0" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="0.3" />
+           <circle cx="0" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="0.3" />
+        </svg>
+
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
       <div
         class="max-w-[1440px] mx-auto px-4 md:px-8 w-full grid md:grid-cols-12 gap-12 items-center relative z-10 mb-0 mt-4 md:mt-6">
         <div class="md:col-span-5"> <!-- Badge -->
@@ -2008,8 +2013,8 @@
           </div>
         </div>
       </div>
-      <div class="max-w-[1440px] mx-auto px-4 md:px-8 w-full relative z-10 reveal mt-4 md:mt-6">
-        <div class="pt-2 pb-6 px-4 md:pt-4 md:pb-10 md:px-12">
+      <div class="max-w-[1440px] mx-auto px-4 md:px-8 w-full relative z-10 mt-4 md:mt-6 bg-white">
+        <div class="pt-2 pb-6 px-4 md:pt-4 md:pb-10 md:px-12 bg-white rounded-2xl">
           <div class="text-center mb-2"> <span
               class="font-label text-[#284b63] text-[11px] md:text-[11.5px] font-bold tracking-[0.3em] uppercase">Compliance
               &amp; Standards</span>
