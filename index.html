@@ -330,6 +330,14 @@
       border-color: #b5b5b5 !important;
     }
 
+    @media (max-width: 767px) {
+      .product-plane, .product-plane:hover {
+        transform: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+      }
+    }
+
     /* ══ Navbar Inversion ══ */
     .nav-inverted {
       background: rgba(40, 75, 99, 0.85) !important;
@@ -1797,7 +1805,7 @@
   <!-- ═══ 3D INTRO LOADER MODEL ═══ -->
   <div id="intro-overlay" role="status" aria-label="Loading Sri Asha Forgings">
     <div class="intro-card-3d" id="introCard"> <img class="intro-logo-3d logo-theme-color"
-        src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp" alt="Sri Asha Forgings Logo">
+        src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp" alt="Sri Asha Forgings Logo" loading="lazy" decoding="async">
       <div class="intro-text-3d">
         <div class="intro-brand-3d">SRI ASHA <span class="text-[#b5b5b5]">FORGINGS</span> <span
             class="text-[#b5b5b5] text-[0.6em] normal-case">Pvt Ltd</span>
@@ -1819,7 +1827,7 @@
       class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1440px] z-50 glass-3d rounded-[8px] px-4 md:px-8 py-3 flex flex-nowrap justify-between items-center milled-edge navbar-transition">
       <div class="flex items-center gap-1.5 md:gap-2 max-w-[calc(100%-60px)] md:max-w-none"> <img
           src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp" alt="Sri Asha Forgings Logo" width="64"
-          height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color">
+          height="64" class="h-12 md:h-16 w-auto -my-1.5 md:-my-3 transition-all duration-500 logo-theme-color" loading="lazy" decoding="async">
         <div class="flex flex-col justify-center w-fit">
           <div id="brandName"
             class="text-[25.1px] sm:text-[22.5px] md:text-[27.5px] font-black text-primary tracking-tighter font-headline uppercase leading-none whitespace-nowrap transition-colors duration-500 flex items-baseline">
@@ -1882,51 +1890,51 @@
       </div>
       <div
         class="max-w-[1440px] mx-auto px-4 md:px-8 w-full grid md:grid-cols-12 gap-12 items-center relative z-10 mb-0 mt-4 md:mt-6">
-        <div class="md:col-span-5"> <!-- Badge -->
+        <div class="md:col-span-5 text-center md:text-left"> <!-- Badge -->
           <div
             class="inline-block py-1 px-3.5 bg-white/80 backdrop-blur-md rounded-full shadow-md border border-white mb-6">
             <span
-              class="text-secondary font-headline font-bold uppercase tracking-normal md:tracking-[0.2em] text-[7.5px] md:text-[9.5px]">ISO
+              class="text-secondary font-headline font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-[7.5px] md:text-[9.5px]">ISO
               Certified &middot; Est. 2004 &middot; Hyderabad, India</span>
           </div> <!-- Title -->
           <h1
-            class="text-4xl md:text-6xl font-headline font-extrabold text-primary leading-[0.9] tracking-tighter mb-6 uppercase depth-text"
+            class="text-4xl md:text-6xl font-headline font-extrabold text-primary leading-normal md:leading-[1.1] tracking-tight md:tracking-normal mb-8 uppercase depth-text"
             style="position:relative;z-index:5;opacity:1 !important;transform:none !important;">
-            PRECISION ALUMINIUM FORGING SPECIALISTS
+            PRECISION ALUMINIUM <span class="text-secondary">FORGING SPECIALISTS</span>
           </h1> <!-- Mobile 3D banner image (directly below title) -->
           <div class="md:hidden relative group mb-8">
             <div
-              class="bg-white rounded-[32px] p-2 relative overflow-hidden transition-transform duration-700 aspect-video product-plane">
+              class="bg-white rounded-[32px] p-2 relative overflow-hidden aspect-video product-plane">
               <div class="w-full h-full rounded-[24px] overflow-hidden relative bg-[#0a1118]"> <img
                   alt="Forged Rings Banner" class="hero-crossfade-img"
                   src="images/Bvgg5wXF_pasted-image-2026-03-27T21-08-00-975Z-cropped-processed-by-imagy.webp"
-                  fetchpriority="high" width="800" height="450" decoding="async" /> <img alt="T-Shaped Forging banner"
+                  fetchpriority="high" width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img alt="T-Shaped Forging banner"
                   class="hero-crossfade-img"
                   src="images/85LrB7KJ_pasted-image-2026-03-27T21-11-05-417Z-cropped-processed-by-imagy.webp"
-                  width="800" height="450" decoding="async" /> <img alt="Sri Asha Forgings Banner"
+                  width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img alt="Sri Asha Forgings Banner"
                   class="hero-crossfade-img" src="images/rsHbgxWx_image.webp" width="800" height="450"
-                  decoding="async" /> <img alt="Aluminum Alloy Forging Banner" class="hero-crossfade-img"
+                  decoding="async"  loading="lazy" decoding="async" /> <img alt="Aluminum Alloy Forging Banner" class="hero-crossfade-img"
                   src="images/9fdWLyhY_pasted-image-2026-03-27T21-13-17-402Z-cropped-processed-by-imagy.webp"
-                  width="800" height="450" decoding="async" /> <img
+                  width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Precision Forged Part 5 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
                   src="images/mZQ5hVSy_pasted-image-2026-03-27T21-25-01-596Z-cropped-processed-by-imagy.webp"
-                  width="800" height="450" decoding="async" /> <img
+                  width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forgings Operations 2 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/NjtRRQ7J_IMG-20260331-WA0016.webp" width="800" height="450" decoding="async" /> <img
+                  src="images/NjtRRQ7J_IMG-20260331-WA0016.webp" width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forgings Operations 3 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/mZ0Y2YcF_IMG-20260331-WA0018.webp" width="800" height="450" decoding="async" /> <img
+                  src="images/mZ0Y2YcF_IMG-20260331-WA0018.webp" width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forgings Operations 4 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/t4zW58B9_IMG-20260331-WA0020.webp" width="800" height="450" decoding="async" /> <img
+                  src="images/t4zW58B9_IMG-20260331-WA0020.webp" width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Industrial Machinery Forging Floor open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/0N4X67sM_IMG-20260314-WA0034.webp" width="800" height="450" decoding="async" /> <img
+                  src="images/0N4X67sM_IMG-20260314-WA0034.webp" width="800" height="450" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forging Operations open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/RVHrGn20_IMG-20260401-WA0066.webp" width="800" height="450" decoding="async" />
+                  src="images/RVHrGn20_IMG-20260401-WA0066.webp" width="800" height="450" decoding="async"  loading="lazy" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent z-10">
                 </div>
               </div>
@@ -1940,7 +1948,7 @@
             </div>
           </div>
           <h2 class="text-xl md:text-2xl font-headline font-bold text-secondary mb-10 uppercase tracking-tight">
-            Leading Manufacturers of High-Performance Forged Components for Aerospace & Defence
+            LEADING FORGING MANUFACTURERS<br />FOR AEROSPACE & DEFENCE
           </h2>
           <p class="hidden-seo">
             Sri Asha Forgings Pvt Ltd is a premier aluminium forging company in Hyderabad, India, specialising in precision open die aluminium alloy forgings for aerospace, defence, space, automotive, and heavy engineering industries. ISO 9001:2015 certified. Engineering excellence delivered with integrity since 2004.
@@ -1955,37 +1963,37 @@
         <div class="md:col-span-7 hidden md:block relative">
           <div class="relative group">
             <div
-              class="bg-white rounded-[32px] p-2 relative overflow-hidden transition-transform duration-700 aspect-video product-plane">
+              class="bg-white rounded-[32px] p-2 relative overflow-hidden aspect-video product-plane">
               <div class="w-full h-full rounded-[28px] overflow-hidden relative bg-[#0a1118]"> <img
                   alt="Forged Rings Banner" class="hero-crossfade-img"
                   src="images/Bvgg5wXF_pasted-image-2026-03-27T21-08-00-975Z-cropped-processed-by-imagy.webp"
-                  fetchpriority="high" width="1200" height="675" decoding="async" /> <img alt="T-Shaped Forging banner"
+                  fetchpriority="high" width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img alt="T-Shaped Forging banner"
                   class="hero-crossfade-img"
                   src="images/85LrB7KJ_pasted-image-2026-03-27T21-11-05-417Z-cropped-processed-by-imagy.webp"
-                  width="1200" height="675" decoding="async" /> <img alt="Sri Asha Forgings Banner"
+                  width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img alt="Sri Asha Forgings Banner"
                   class="hero-crossfade-img" src="images/rsHbgxWx_image.webp" width="1200" height="675"
-                  decoding="async" /> <img alt="Aluminum Alloy Forging Banner" class="hero-crossfade-img"
+                  decoding="async"  loading="lazy" decoding="async" /> <img alt="Aluminum Alloy Forging Banner" class="hero-crossfade-img"
                   src="images/9fdWLyhY_pasted-image-2026-03-27T21-13-17-402Z-cropped-processed-by-imagy.webp"
-                  width="1200" height="675" decoding="async" /> <img
+                  width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Precision Forged Part 5 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
                   src="images/mZQ5hVSy_pasted-image-2026-03-27T21-25-01-596Z-cropped-processed-by-imagy.webp"
-                  width="1200" height="675" decoding="async" /> <img
+                  width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forgings Operations 2 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/NjtRRQ7J_IMG-20260331-WA0016.webp" width="1200" height="675" decoding="async" /> <img
+                  src="images/NjtRRQ7J_IMG-20260331-WA0016.webp" width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forgings Operations 3 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/mZ0Y2YcF_IMG-20260331-WA0018.webp" width="1200" height="675" decoding="async" /> <img
+                  src="images/mZ0Y2YcF_IMG-20260331-WA0018.webp" width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forgings Operations 4 open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/t4zW58B9_IMG-20260331-WA0020.webp" width="1200" height="675" decoding="async" /> <img
+                  src="images/t4zW58B9_IMG-20260331-WA0020.webp" width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Industrial Machinery Forging Floor open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/0N4X67sM_IMG-20260314-WA0034.webp" width="1200" height="675" decoding="async" /> <img
+                  src="images/0N4X67sM_IMG-20260314-WA0034.webp" width="1200" height="675" decoding="async"  loading="lazy" decoding="async" /> <img
                   alt="Sri Asha Forging Operations open die forging Hyderabad India"
                   title="Sri Asha Forgings - Precision Forging" class="hero-crossfade-img"
-                  src="images/RVHrGn20_IMG-20260401-WA0066.webp" width="1200" height="675" decoding="async" />
+                  src="images/RVHrGn20_IMG-20260401-WA0066.webp" width="1200" height="675" decoding="async"  loading="lazy" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent z-10">
                 </div>
               </div>
@@ -2023,23 +2031,23 @@
             <img src="images/K8fNZfSy_image.webp" width="150" height="110"
               alt="ISO 9001:2015 Quality Management open die forging Hyderabad India"
               title="Sri Asha Forgings - Precision Forging"
-              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300">
+              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300" loading="lazy" decoding="async">
             <img src="images/wvw8LLss_image.webp" width="150" height="110"
               alt="Skyroot Aerospace Authorized Supplier open die forging Hyderabad India"
               title="Sri Asha Forgings - Precision Forging"
-              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300">
+              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300" loading="lazy" decoding="async">
             <img src="images/WzmZ5pT6_image.webp" width="150" height="110"
               alt="Perry Johnson Registrars Certified open die forging Hyderabad India"
               title="Sri Asha Forgings - Precision Forging"
-              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300">
+              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300" loading="lazy" decoding="async">
             <img src="images/6qK24snM_image.webp" width="180" height="130"
               alt="Special Recognition for ISRO Mission open die forging Hyderabad India"
               title="Sri Asha Forgings - Precision Forging"
-              class="w-[24%] sm:w-[22%] md:w-auto h-auto md:h-32 object-contain hover:-translate-y-1 transition-transform duration-300">
+              class="w-[24%] sm:w-[22%] md:w-auto h-auto md:h-32 object-contain hover:-translate-y-1 transition-transform duration-300" loading="lazy" decoding="async">
             <img src="images/FR51wtPw_image.webp" width="150" height="110"
               alt="ANAB Accredited Facility open die forging Hyderabad India"
               title="Sri Asha Forgings - Precision Forging"
-              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300">
+              class="w-[18%] sm:w-[16%] md:w-auto h-auto md:h-28 object-contain hover:-translate-y-1 transition-transform duration-300" loading="lazy" decoding="async">
           </div> <!-- Professional Machined Separator Bottom -->
           <div class="flex items-center justify-center opacity-30 mt-8 md:mt-12">
             <div class="h-px w-full bg-gradient-to-r from-transparent via-[#284b63] to-[#284b63]">
@@ -2062,7 +2070,7 @@
               class="w-full h-full rounded-[16px] md:rounded-[24px] overflow-hidden relative shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]">
               <img src="images/65vszGFq_IMG-20260311-WA0045.webp"
                 alt="Sri Asha Forgings Industrial Facility open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-10"></div>
             </div>
             <div class="absolute bottom-4 left-4 z-20">
@@ -2080,7 +2088,7 @@
               class="w-full h-full rounded-[16px] md:rounded-[24px] overflow-hidden relative shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]">
               <img src="images/RVHrGn20_IMG-20260401-WA0066.webp"
                 alt="Sri Asha Forging Operations open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-10"></div>
             </div>
             <div class="absolute bottom-4 left-4 z-20">
@@ -2129,7 +2137,7 @@
             class="product-plane contact-trigger reveal reveal-delay-1 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/rs7D4KrR_image.webp" width="400" height="225"
                 alt="Aluminium Forged Rings manufactured by Sri Asha Forgings Hyderabad open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2146,7 +2154,7 @@
             class="product-plane contact-trigger reveal reveal-delay-2 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/cLJY5sPs_image.webp" width="400" height="225"
                 alt="Aluminium Forged Discs by Sri Asha Forgings open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2162,7 +2170,7 @@
             class="product-plane contact-trigger reveal reveal-delay-3 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/qvYtb281_image.webp" width="400" height="225"
                 alt="Precision Forged Shafts aluminium alloy open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2178,7 +2186,7 @@
             class="product-plane contact-trigger reveal reveal-delay-4 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/k45n1gdv_image.webp" width="400" height="225"
                 alt="Shaped Aluminium Forgings custom components open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2194,7 +2202,7 @@
             class="product-plane contact-trigger reveal reveal-delay-1 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/W3STKPBq_image.webp" width="400" height="225"
                 alt="Aluminium Forged Plates for aerospace and defence open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2210,7 +2218,7 @@
             class="product-plane contact-trigger reveal reveal-delay-2 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/YC1cZHgK_image.webp" width="400" height="225"
                 alt="Forged Aluminium Rods precision manufacturing open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2226,7 +2234,7 @@
             class="product-plane contact-trigger reveal reveal-delay-3 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/br6sH9dq_image.webp" width="400" height="225"
                 alt="AFPL Exclusive Long Tube Ring Conical Forgings open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2244,7 +2252,7 @@
             class="product-plane contact-trigger reveal reveal-delay-4 rounded-[8px] overflow-hidden bg-white border border-outline-variant/30 shadow-sm">
             <div class="relative aspect-[16/9]"> <img src="images/wvRn5Y9X_image.webp" width="400" height="225"
                 alt="Custom Aluminium Forgings as per customer drawings open die forging Hyderabad India"
-                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover">
+                title="Sri Asha Forgings - Precision Forging" class="w-full h-full object-cover" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-primary/10">
               </div>
             </div>
@@ -2458,89 +2466,89 @@
           <div class="industry-card contact-trigger">
             <img src="images/j5Tyczb8_image.webp" width="200" height="150"
               alt="Aerospace Forging Supplier India open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Aerospace</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/TPVDKpDt_image.webp" width="200" height="150"
               alt="Defence Forging Manufacturer India open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Defence</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/TY7wP0Sh_image.webp" width="200" height="150"
               alt="Space and Satellites Forging open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Space / Satellites</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/Bv08f4V2_image.webp" width="200" height="150"
               alt="Automotive Aluminium Forging open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Automotive</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/MpkH1zxt_image.webp" width="200" height="150"
               alt="Heavy Engineering Forging Components open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Heavy Engineering</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/mkvL3Sxw_image.webp" width="200" height="150"
               alt="Industrial Machinery Aluminium Forgings open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Industrial Machinery</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/kgFJ88TJ_image.webp" width="200" height="150"
               alt="Oil and Gas Forged Components open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Oil &amp; Gas</div>
           </div>
           <div class="industry-card contact-trigger">
             <img src="images/141SV56v_image.webp" width="200" height="150"
               alt="Power Generation Aluminium Forgings open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Power Generation</div>
           </div> <!-- duplicates for seamless loop -->
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/j5Tyczb8_image.webp" width="200" height="150"
-              alt="Aerospace Forging Supplier India open die forging Hyderabad India" decoding="async">
+              alt="Aerospace Forging Supplier India open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Aerospace</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/TPVDKpDt_image.webp" width="200" height="150"
-              alt="Defence Forging Manufacturer India open die forging Hyderabad India" decoding="async">
+              alt="Defence Forging Manufacturer India open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Defence</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/TY7wP0Sh_image.webp" width="200" height="150"
-              alt="Space and Satellites Forging open die forging Hyderabad India" decoding="async">
+              alt="Space and Satellites Forging open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Space / Satellites</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/Bv08f4V2_image.webp" width="200" height="150"
-              alt="Automotive Aluminium Forging open die forging Hyderabad India" decoding="async">
+              alt="Automotive Aluminium Forging open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Automotive</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/MpkH1zxt_image.webp" width="200" height="150"
-              alt="Heavy Engineering Forging Components open die forging Hyderabad India" decoding="async">
+              alt="Heavy Engineering Forging Components open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Heavy Engineering</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/mkvL3Sxw_image.webp" width="200" height="150"
-              alt="Industrial Machinery Aluminium Forgings open die forging Hyderabad India" decoding="async">
+              alt="Industrial Machinery Aluminium Forgings open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Industrial Machinery</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/kgFJ88TJ_image.webp" width="200" height="150"
-              alt="Oil and Gas Forged Components open die forging Hyderabad India" decoding="async">
+              alt="Oil and Gas Forged Components open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Oil &amp; Gas</div>
           </div>
           <div class="industry-card contact-trigger" aria-hidden="true">
             <img src="images/141SV56v_image.webp" width="200" height="150"
-              alt="Power Generation Aluminium Forgings open die forging Hyderabad India" decoding="async">
+              alt="Power Generation Aluminium Forgings open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <div class="industry-card-label">Power Generation</div>
           </div>
         </div>
@@ -2605,134 +2613,134 @@
           <div class="equip-card contact-trigger">
             <img src="images/8CG8Szgf_image.webp" width="310" height="220"
               alt="3.15 Ton Open Die Russian Hammer at Sri Asha Forgings open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>3.15 Ton Open Die Russian Hammer</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/2jP4JzSM_Whats-App-Image-2026-03-16-at-7-08-04-PM.webp" width="310" height="220"
               alt="2 Ton Masse Hammer at manufacturing facility open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>2 Ton Masse Hammer</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/ydz82Hvn_image.webp" width="310" height="220"
               alt="2500 Ton Hydraulic Press for Precision Forging open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>2500 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/zBGjJ0mz_image.webp" width="310" height="220"
               alt="1200 Ton Hydraulic Press Infrastructure open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>1200 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/SN4NKDGV_Whats-App-Image-2026-03-11-at-4-36-40-PM.webp" width="310" height="220"
               alt="Drop Bottom Furnace for Aluminium Heat Treatment open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Drop Bottom Furnace</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/VLqR0ckT_Whats-App-Image-2026-03-28-at-3-13-42-PM.webp" width="310" height="220"
               alt="Heavy Duty Cutting Machine open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/xCsLh8N2_Whats-App-Image-2026-04-01-at-1-45-15-PM.webp" width="310" height="220"
               alt="Precision Aluminium Forging Component open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/Hkg5TKQS_image.webp" width="310" height="220"
               alt="Specialized Forging Process Detail open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Pit Furnace</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/nhdqqVbG_Whats-App-Image-2026-03-28-at-3-29-30-PM.webp" width="310" height="220"
               alt="Ultrasonic Testing Krautkramer USM machine open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Krautkramer USM UT machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/SR23djRW_image.webp" width="310" height="220"
               alt="Quality Controlled Forging Output open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Digiscan EEC UT machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/1XxG4WhN_Whats-App-Image-2026-03-28-at-3-15-09-PM.webp" width="310" height="220"
               alt="FIE Tensile Test Machine Quality Assurance open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>FIE Tensile Test Machine</h3>
           </div>
           <div class="equip-card contact-trigger">
             <img src="images/02J1dXKm_image.webp" width="310" height="220"
               alt="Final Precision Forged Product open die forging Hyderabad India"
-              title="Sri Asha Forgings - Precision Forging" decoding="async">
+              title="Sri Asha Forgings - Precision Forging" decoding="async" loading="lazy" decoding="async">
             <h3>Electrical conductivity meter</h3>
           </div> <!-- duplicates -->
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/8CG8Szgf_image.webp" width="310" height="220"
               alt="3.15 Ton Open Die Russian Hammer at Sri Asha Forgings open die forging Hyderabad India"
-              decoding="async">
+              decoding="async" loading="lazy" decoding="async">
             <h3>3.15 Ton Open Die Russian Hammer</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/2jP4JzSM_Whats-App-Image-2026-03-16-at-7-08-04-PM.webp" width="310" height="220"
-              alt="2 Ton Masse Hammer at manufacturing facility open die forging Hyderabad India" decoding="async">
+              alt="2 Ton Masse Hammer at manufacturing facility open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>2 Ton Masse Hammer</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/ydz82Hvn_image.webp" width="310" height="220"
-              alt="2500 Ton Hydraulic Press for Precision Forging open die forging Hyderabad India" decoding="async">
+              alt="2500 Ton Hydraulic Press for Precision Forging open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>2500 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/zBGjJ0mz_image.webp" width="310" height="220"
-              alt="1200 Ton Hydraulic Press Infrastructure open die forging Hyderabad India" decoding="async">
+              alt="1200 Ton Hydraulic Press Infrastructure open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>1200 Ton Hydraulic Press</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/SN4NKDGV_Whats-App-Image-2026-03-11-at-4-36-40-PM.webp" width="310" height="220"
-              alt="Drop Bottom Furnace for Aluminium Heat Treatment open die forging Hyderabad India" decoding="async">
+              alt="Drop Bottom Furnace for Aluminium Heat Treatment open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Drop Bottom Furnace</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/VLqR0ckT_Whats-App-Image-2026-03-28-at-3-13-42-PM.webp" width="310" height="220"
-              alt="Heavy Duty Cutting Machine open die forging Hyderabad India" decoding="async">
+              alt="Heavy Duty Cutting Machine open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/xCsLh8N2_Whats-App-Image-2026-04-01-at-1-45-15-PM.webp" width="310" height="220"
-              alt="Precision Aluminium Forging Component open die forging Hyderabad India" decoding="async">
+              alt="Precision Aluminium Forging Component open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Cutting Machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/Hkg5TKQS_image.webp" width="310" height="220"
-              alt="Specialized Forging Process Detail open die forging Hyderabad India" decoding="async">
+              alt="Specialized Forging Process Detail open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Pit Furnace</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/nhdqqVbG_Whats-App-Image-2026-03-28-at-3-29-30-PM.webp" width="310" height="220"
-              alt="Ultrasonic Testing Krautkramer USM machine open die forging Hyderabad India" decoding="async">
+              alt="Ultrasonic Testing Krautkramer USM machine open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Krautkramer USM UT machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/SR23djRW_image.webp" width="310" height="220"
-              alt="Quality Controlled Forging Output open die forging Hyderabad India" decoding="async">
+              alt="Quality Controlled Forging Output open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Digiscan EEC UT machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/1XxG4WhN_Whats-App-Image-2026-03-28-at-3-15-09-PM.webp" width="310" height="220"
-              alt="FIE Tensile Test Machine Quality Assurance open die forging Hyderabad India" decoding="async">
+              alt="FIE Tensile Test Machine Quality Assurance open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>FIE Tensile Test Machine</h3>
           </div>
           <div class="equip-card contact-trigger" aria-hidden="true">
             <img src="images/02J1dXKm_image.webp" width="310" height="220"
-              alt="Final Precision Forged Product open die forging Hyderabad India" decoding="async">
+              alt="Final Precision Forged Product open die forging Hyderabad India" decoding="async" loading="lazy" decoding="async">
             <h3>Electrical conductivity meter</h3>
           </div>
         </div>
@@ -3211,19 +3219,19 @@
                 <img alt="Aluminium alloy AA 2219 T 8352 open die forging Hyderabad India"
                   title="Sri Asha Forgings - 2219 Precision Forging"
                   class="metallurgy-slide opacity-0 absolute inset-0 transition-opacity duration-1000 rounded-[8px] md:rounded-[14px]"
-                  src="images/HxTqKLqN_image.webp" width="800" height="800" decoding="async" />
+                  src="images/HxTqKLqN_image.webp" width="800" height="800" decoding="async"  loading="lazy" decoding="async" />
                 <img alt="Aluminium alloy AA 2014 T 652 forgings open die forging Hyderabad India"
                   title="Sri Asha Forgings - 2014 Precision Forging"
                   class="metallurgy-slide opacity-0 absolute inset-0 transition-opacity duration-1000 rounded-[8px] md:rounded-[14px]"
-                  src="images/sxwxdJ7F_image.webp" width="800" height="800" decoding="async" />
+                  src="images/sxwxdJ7F_image.webp" width="800" height="800" decoding="async"  loading="lazy" decoding="async" />
                 <img alt="Aluminium alloy AA 6061 T 652 Microstructure 1 open die forging Hyderabad India"
                   title="Sri Asha Forgings - 6061 Precision Forging"
                   class="metallurgy-slide opacity-0 absolute inset-0 transition-opacity duration-1000 rounded-[8px] md:rounded-[14px]"
-                  src="images/T3P76Y8j_image.webp" width="800" height="800" decoding="async" />
+                  src="images/T3P76Y8j_image.webp" width="800" height="800" decoding="async"  loading="lazy" decoding="async" />
                 <img alt="Aluminium alloy AA 6061 T 652 Microstructure 2 open die forging Hyderabad India"
                   title="Sri Asha Forgings - 6061 Precision Forging"
                   class="metallurgy-slide opacity-0 absolute inset-0 transition-opacity duration-1000 rounded-[8px] md:rounded-[14px]"
-                  src="images/8cjRYsfB_image.webp" width="800" height="800" decoding="async" />
+                  src="images/8cjRYsfB_image.webp" width="800" height="800" decoding="async"  loading="lazy" decoding="async" />
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent z-10 rounded-[8px] md:rounded-[14px]">
                 </div>
@@ -3264,330 +3272,330 @@
           <div class="gallery-container">
             <div class="gallery-track" id="galleryTrack">
               <div class="gallery-item">
-                <img src="images/S8exCXUU_IMG-20260412-WA0013.webp" width="1200" height="675" alt="Forging Process 13">
+                <img src="images/S8exCXUU_IMG-20260412-WA0013.webp" width="1200" height="675" alt="Forging Process 13" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/USVDYJru_IMG-20260412-WA0014.webp" width="1200" height="675" alt="Forging Process 14">
+                <img src="images/USVDYJru_IMG-20260412-WA0014.webp" width="1200" height="675" alt="Forging Process 14" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/yuASDwZ4_IMG-20260412-WA0015.webp" width="1200" height="675" alt="Forging Process 15">
+                <img src="images/yuASDwZ4_IMG-20260412-WA0015.webp" width="1200" height="675" alt="Forging Process 15" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/I8SSIcII_IMG-20260412-WA0016.webp" width="1200" height="675" alt="Forging Process 16">
+                <img src="images/I8SSIcII_IMG-20260412-WA0016.webp" width="1200" height="675" alt="Forging Process 16" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/jnY1iNah_IMG-20260412-WA0017.webp" width="1200" height="675" alt="Forging Process 17">
+                <img src="images/jnY1iNah_IMG-20260412-WA0017.webp" width="1200" height="675" alt="Forging Process 17" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/62OkS2Vc_IMG-20260412-WA0018.webp" width="1200" height="675" alt="Forging Process 18">
+                <img src="images/62OkS2Vc_IMG-20260412-WA0018.webp" width="1200" height="675" alt="Forging Process 18" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/fapsXKhh_IMG-20260412-WA0019.webp" width="1200" height="675" alt="Forging Process 19">
+                <img src="images/fapsXKhh_IMG-20260412-WA0019.webp" width="1200" height="675" alt="Forging Process 19" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/v0eG0uUY_IMG-20260412-WA0020.webp" width="1200" height="675" alt="Forging Process 20">
+                <img src="images/v0eG0uUY_IMG-20260412-WA0020.webp" width="1200" height="675" alt="Forging Process 20" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/PAm63LVB_IMG-20260412-WA0021.webp" width="1200" height="675" alt="Forging Process 21">
+                <img src="images/PAm63LVB_IMG-20260412-WA0021.webp" width="1200" height="675" alt="Forging Process 21" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/LhxXtDjE_IMG-20260412-WA0022.webp" width="1200" height="675" alt="Forging Process 22">
+                <img src="images/LhxXtDjE_IMG-20260412-WA0022.webp" width="1200" height="675" alt="Forging Process 22" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/dv8giOcr_IMG-20260412-WA0023.webp" width="1200" height="675" alt="Forging Process 23">
+                <img src="images/dv8giOcr_IMG-20260412-WA0023.webp" width="1200" height="675" alt="Forging Process 23" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/FnZKEZ4j_IMG-20260412-WA0024.webp" width="1200" height="675" alt="Forging Process 24">
+                <img src="images/FnZKEZ4j_IMG-20260412-WA0024.webp" width="1200" height="675" alt="Forging Process 24" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/IJnBftFO_IMG-20260412-WA0025.webp" width="1200" height="675" alt="Forging Process 25">
+                <img src="images/IJnBftFO_IMG-20260412-WA0025.webp" width="1200" height="675" alt="Forging Process 25" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/REMIHEmR_IMG-20260412-WA0026.webp" width="1200" height="675" alt="Forging Process 26">
+                <img src="images/REMIHEmR_IMG-20260412-WA0026.webp" width="1200" height="675" alt="Forging Process 26" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/g9P3Pu9d_IMG-20260412-WA0027.webp" width="1200" height="675" alt="Forging Process 27">
+                <img src="images/g9P3Pu9d_IMG-20260412-WA0027.webp" width="1200" height="675" alt="Forging Process 27" loading="lazy" decoding="async">
               </div>
               <!-- Professional Banners (Excluding raw product inventory) -->
               <div class="gallery-item">
                 <img src="images/Bvgg5wXF_pasted-image-2026-03-27T21-08-00-975Z-cropped-processed-by-imagy.webp"
-                  width="1200" height="675" alt="Forged Rings Banner">
+                  width="1200" height="675" alt="Forged Rings Banner" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/85LrB7KJ_pasted-image-2026-03-27T21-11-05-417Z-cropped-processed-by-imagy.webp"
-                  width="1200" height="675" alt="T-Shaped Forging banner">
+                  width="1200" height="675" alt="T-Shaped Forging banner" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
-                <img src="images/rsHbgxWx_image.webp" width="1200" height="675" alt="Sri Asha Forgings Banner">
+                <img src="images/rsHbgxWx_image.webp" width="1200" height="675" alt="Sri Asha Forgings Banner" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/9fdWLyhY_pasted-image-2026-03-27T21-13-17-402Z-cropped-processed-by-imagy.webp"
-                  width="1200" height="675" alt="Aluminum Alloy Forging Banner">
+                  width="1200" height="675" alt="Aluminum Alloy Forging Banner" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/mZQ5hVSy_pasted-image-2026-03-27T21-25-01-596Z-cropped-processed-by-imagy.webp"
                   width="1200" height="675" alt="Precision Forged Part 10 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/VNRxSg1k_pasted-image-2026-03-27T21-13-17-402Z-cropped-processed-by-imagy-_1_.webp"
                   width="1200" height="675" alt="Shaped Forgings Showcase open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/4yzqgQW5_pasted-image-2026-03-27T21-21-39-048Z-cropped-processed-by-imagy.webp"
                   width="1200" height="675" alt="Precision Forged Part 10 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/J7HJR04b_Whats-App-Image-2026-03-14-at-12-44-10-PM.webp" width="1200" height="675"
                   alt="Factory Internal Infrastructure open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/2jg2czMx_image.webp" width="1200" height="675"
                   alt="Precision Forged Component open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/jj8hzKyw_image.webp" width="1200" height="675"
                   alt="High-Tech Forging Result open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/JzM3vtqV_image.webp" width="1200" height="675"
                   alt="Engineered Aluminum Forging open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/26shw5yZ_image.webp" width="1200" height="675"
                   alt="Industrial Metal Fabrication open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/4dhVnLkL_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 1 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/432QYHKK_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 2 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/TwZj98qZ_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 3 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/wMLX4Wwh_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 4 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/g0jvbcgf_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 5 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/8P8RqSQ6_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 6 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/Xq9CVrSV_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 7 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/90BQ8ZHB_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 8 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/sDw25YJL_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 9 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/gJVzj8j9_image.webp" width="1200" height="675"
                   alt="Precision Forged Part 10 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/W17gnx5z_IMG-20260330-WA0051-_2_.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 1 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/3xZmBztW_IMG-20260330-WA0052-_2_.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 2 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/P5H11dzB_IMG-20260330-WA0053.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 3 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/wTLht1JL_IMG-20260330-WA0054.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 4 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/qvGyLW1t_IMG-20260330-WA0055-_2_.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 5 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/PfLbj3qs_IMG-20260330-WA0056.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 6 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/667VXjQN_IMG-20260330-WA0057.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 7 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/pLvKKPJv_IMG-20260330-WA0058.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 8 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/kMkQXQV6_IMG-20260330-WA0059.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 9 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/ncBvsX7N_IMG-20260330-WA0060.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 10 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/QNBg34dR_IMG-20260330-WA0061.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 11 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/Sx4ccm7t_IMG-20260330-WA0062.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 12 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/vZvfzC0m_IMG-20260330-WA0066-_2_.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Facility 13 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/Cx4kN9cS_IMG-20260331-WA0001.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Team 1 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/pLvKKPYs_IMG-20260331-WA0005.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Team 2 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/t4zW58B9_IMG-20260331-WA0020.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Operations 4 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/65vszGFq_IMG-20260311-WA0045.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Industry Facility open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/RVHrGn20_IMG-20260401-WA0066.webp" width="1200" height="675"
                   alt="Precision Forged Aluminum Component open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/4NMmYMhw_IMG-20260314-WA0027.webp" width="1200" height="675"
                   alt="Industrial Manufacturing Operations open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/kXD2X9Ds_IMG-20260314-WA0028.webp" width="1200" height="675"
                   alt="Advanced Forging Machinery View open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/qMYzNYCS_IMG-20260314-WA0032.webp" width="1200" height="675"
                   alt="Engineered Forging Showcase open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/L67nJ71d_IMG-20260314-WA0033.webp" width="1200" height="675"
                   alt="Component Detail Analysis open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/J4gGsgB6_IMG-20260401-WA0021.webp" width="1200" height="675"
                   alt="Facility Infrastructure Hyderabad open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/Fsq7YqL5_IMG-20260401-WA0022.webp" width="1200" height="675"
                   alt="Precision Manufactured Results open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/qMgNM0g1_IMG-20260401-WA0024.webp" width="1200" height="675"
                   alt="Forging Plant Equipment open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/4NMmYMhr_IMG-20260401-WA0025.webp" width="1200" height="675"
                   alt="Technical Infrastructure Detail open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/DymSyFm9_IMG-20260401-WA0026.webp" width="1200" height="675"
                   alt="Metallurgical Analysis Quality open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/Gh94hr9Z_IMG-20260401-WA0029.webp" width="1200" height="675"
                   alt="Industrial Manufacturing Excellence open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/m2qtPqF6_IMG-20260401-WA0030.webp" width="1200" height="675"
                   alt="Engineering Facility Overview open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/QxPHFPWY_IMG-20260401-WA0031.webp" width="1200" height="675"
                   alt="Precision Component Result open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/HkmbbT4K_IMG-20260331-WA0014.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Operations 1 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/NjtRRQ7J_IMG-20260331-WA0016.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Operations 2 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/mZ0Y2YcF_IMG-20260331-WA0018.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Operations 3 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/t4zW58B9_IMG-20260331-WA0020.webp" width="1200" height="675"
                   alt="Sri Asha Forgings Operations 4 open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
               <div class="gallery-item">
                 <img src="images/0N4X67sM_IMG-20260314-WA0034.webp" width="1200" height="675"
                   alt="Industrial Machinery Forging Floor open die forging Hyderabad India"
-                  title="Sri Asha Forgings - Precision Forging">
+                  title="Sri Asha Forgings - Precision Forging" loading="lazy" decoding="async">
               </div>
             </div>
           </div> <!-- Arrows --> <button class="gallery-arrow left" id="prevBtn" aria-label="Previous Slide"> <span
@@ -3609,7 +3617,7 @@
         <div class="space-y-4 col-span-2 md:col-span-1 border-b border-white/10 md:border-none pb-6 md:pb-0"> <img
             src="images/RFd6tsd9_sri-asha-forgings-logo-removebg-preview.webp" height="38"
             alt="Sri Asha Forgings Pvt. Ltd. open die forging Hyderabad India"
-            title="Sri Asha Forgings - Precision Forging" class="h-9 md:h-11 brightness-0 invert">
+            title="Sri Asha Forgings - Precision Forging" class="h-9 md:h-11 brightness-0 invert" loading="lazy" decoding="async">
           <div
             class="text-[14px] md:text-lg font-headline font-bold text-white uppercase tracking-widest leading-tight">
             SRI ASHA FORGINGS</div>
